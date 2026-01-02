@@ -1,7 +1,7 @@
 import numpy as np
 
 class StockTradingEnv:
-    def __innit__(self, df):
+    def __init__(self, df):
         self.df = df
         self.reset()
 
