@@ -2,6 +2,12 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 from env import StockTradingEnv
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import random
+from collections import deque
+
 
 def load_stock_data(ticker_symbol, start_date, end_date):
     
