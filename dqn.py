@@ -50,12 +50,12 @@ class Args:
     """total timesteps of the experiments"""
     learning_rate: float = 2.5e-4
     """the learning rate of the optimizer"""
-    num_envs: int = 1
+    num_envs: int = 10
     """the number of parallel game environments"""
     buffer_size: int = 10000
     """the replay memory buffer size"""
     gamma: float = 0.99
-    """the discount factor gamma, prefering longer time rewards"""
+    """the discount factor gamma, prefering longer time rewards the closer it is to 1"""
     tau: float = 1.0
     """the target network update rate"""
     target_network_frequency: int = 500
