@@ -6,7 +6,7 @@ from distutils.util import strtobool
 
 import boto3
 import requests
-import wandb
+import testing_wandb
 
 client = boto3.client("batch")
 
@@ -41,7 +41,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-api = wandb.Api()
+api = testing_wandb.Api()
 
 # Project is specified by <entity/project-name>
 runs = api.runs(args.wandb_project)

@@ -6,7 +6,7 @@ from typing import Callable, Dict, List, Optional
 
 import numpy as np
 import optuna
-import wandb
+import testing_wandb
 from rich import print
 from tensorboard.backend.event_processing import event_accumulator
 
@@ -73,7 +73,7 @@ class Tuner:
             params = self.params_fn(trial)
             run = None
             if len(self.wandb_kwargs.keys()) > 0:
-                run = wandb.init(
+                run = testing_wandb.init(
                     **self.wandb_kwargs,
                     config=params,
                     name=f"{self.study_name}_{trial.number}",

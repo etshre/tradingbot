@@ -6,7 +6,7 @@ from distutils.util import strtobool
 
 import boto3
 import requests
-import wandb
+import testing_wandb
 
 # fmt: off
 parser = argparse.ArgumentParser(description='CleanRL Experiment Submission')
@@ -123,7 +123,7 @@ if args.provider == "aws":
                     "environment": [
                         {"name": "WANDB_API_KEY", "value": args.wandb_key},
                         {"name": "WANDB_RESUME", "value": "allow"},
-                        {"name": "WANDB_RUN_ID", "value": wandb.util.generate_id()},
+                        {"name": "WANDB_RUN_ID", "value": testing_wandb.util.generate_id()},
                     ],
                     "resourceRequirements": resources_requirements,
                 },

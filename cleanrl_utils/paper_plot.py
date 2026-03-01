@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import wandb
+import testing_wandb
 
 sns.set_style("whitegrid")
 mpl.rcParams["text.usetex"] = True
@@ -41,7 +41,7 @@ parser.add_argument("--y-label", type=str, default="Episodic Return", help="the 
 parser.add_argument("--y-lim-bottom", type=float, default=0.0, help="the bottom limit for the y-axis")
 parser.add_argument("--output-format", type=str, default="pdf", help="either `pdf`, `png`, or `svg`")
 args = parser.parse_args()
-api = wandb.Api()
+api = testing_wandb.Api()
 
 # hacks
 env_dict = {

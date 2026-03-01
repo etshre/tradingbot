@@ -32,7 +32,7 @@ class Args:
     """if toggled, this experiment will be tracked with Weights and Biases"""
     wandb_project_name: str = "trading"
     """the wandb's project name"""
-    wandb_entity: str = None
+    wandb_entity: str = ''
     """the entity (team) of wandb's project"""
     capture_video: bool = False
     """whether to capture videos of the agent performances (check out `videos` folder)"""
@@ -81,6 +81,11 @@ class Args:
 def make_env(env_id, seed, idx, capture_video, run_name, data_path):
     def thunk():
         df = pd.read_csv(data_path, parse_dates=True, index_col='Date')
+        #sma 50
+        df['sma_50'] = df['Close'].rolling(window=50).mean()
+
+        #remove the first 49
+        df = df.dropna()
 
         if capture_video and idx == 0:
             env = gym.make(env_id, render_mode="rgb_array")
@@ -118,12 +123,15 @@ def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
 
 if __name__ == "__main__":
     args = tyro.cli(Args)
-    assert args.num_envs == 1, "vectorized envs are not supported at the moment"
-    run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
-    if args.track:
-        import wandb
+    #match num_envs
+    assert args.num_envs == 10, "vectorized envs are not supported at the moment"
 
-        wandb.init(
+    run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+
+    if args.track:
+        import testing_wandb
+
+        testing_wandb.init(
             project=args.wandb_project_name,
             entity=args.wandb_entity,
             sync_tensorboard=True,

@@ -1,0 +1,28 @@
+{
+  "os": "macOS-26.3-x86_64-i386-64bit",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-03-01T17:53:50.999472Z",
+  "program": "/Users/emerald/code/tradingbot/testing_wandb.py",
+  "codePath": "testing_wandb.py",
+  "codePathLocal": "testing_wandb.py",
+  "git": {
+    "remote": "https://github.com/etshre/tradingbot.git",
+    "commit": "7e4190f3cda954765a9d2ba4561a456826030cb3"
+  },
+  "email": "estherr.w54@gmail.com",
+  "root": "/Users/emerald/code/tradingbot",
+  "host": "Esthers-MacBook-Pro.local",
+  "executable": "/Users/emerald/code/tradingbot/.venv/bin/python",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "357000257536",
+      "used": "315947593728"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "writerId": "erht5rupbbde09ey7qwthtemeklaspvi"
+}

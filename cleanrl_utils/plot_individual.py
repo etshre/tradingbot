@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import wandb
+import testing_wandb
 
 parser = argparse.ArgumentParser(description="CleanRL Plots")
 # Common arguments
@@ -51,7 +51,7 @@ parser.add_argument("--y-lim-bottom", type=float, default=0.0, help="the bottom 
 parser.add_argument("--output-format", type=str, default="pdf", help="either `pdf`, `png`, or `svg`")
 parser.add_argument("--seed", type=int, default=6, help="seed of color palette shuffle")
 args = parser.parse_args()
-api = wandb.Api()
+api = testing_wandb.Api()
 np.random.seed(args.seed)
 
 # hacks
