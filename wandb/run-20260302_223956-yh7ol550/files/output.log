@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 217, in <module>
+    next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+                                                          ^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/vector/sync_vector_env.py", line 222, in step
+    ) = self.envs[i].step(action)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/wrappers/common.py", line 513, in step
+    obs, reward, terminated, truncated, info = super().step(action)
+                                               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/core.py", line 322, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 270, in step
+    self.calculate_metrics()
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 286, in calculate_metrics
+    self.results_metrics[metric['name']] = metric['function'](self.historical_info)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/dqn.py", line 108, in <lambda>
+    env.unwrapped.add_metric('Position', lambda env: env.unwrapped.historical_info['Position', -1])
+                                                     ^^^^^^^^^^^^^
+AttributeError: 'History' object has no attribute 'unwrapped'

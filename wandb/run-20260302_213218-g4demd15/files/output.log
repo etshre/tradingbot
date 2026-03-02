@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 167, in <module>
+    envs = gym.vector.SyncVectorEnv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/vector/sync_vector_env.py", line 86, in __init__
+    self.envs = [env_fn() for env_fn in env_fns]
+                 ^^^^^^^^
+  File "/Users/emerald/code/tradingbot/dqn.py", line 97, in thunk
+    env = gym.make(
+          ^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 740, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 110, in __init__
+    self._set_df(df)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 142, in _set_df
+    self._info_array = np.array(self.df[self._info_columns])
+                                ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['close'] not in index"

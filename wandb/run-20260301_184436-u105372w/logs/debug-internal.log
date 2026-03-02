@@ -1,0 +1,15 @@
+{"time":"2026-03-01T18:44:37.283137Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-01T18:44:37.300584Z","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-01T18:44:37.966292Z","level":"INFO","msg":"stream: created new stream","id":"u105372w"}
+{"time":"2026-03-01T18:44:37.967127Z","level":"INFO","msg":"handler: started","stream_id":"u105372w"}
+{"time":"2026-03-01T18:44:37.96779Z","level":"INFO","msg":"stream: started","id":"u105372w"}
+{"time":"2026-03-01T18:44:37.967853Z","level":"INFO","msg":"writer: started","stream_id":"u105372w"}
+{"time":"2026-03-01T18:44:37.96804Z","level":"INFO","msg":"sender: started","stream_id":"u105372w"}
+{"time":"2026-03-01T18:44:38.78129Z","level":"INFO","msg":"stream: closing","id":"u105372w"}
+{"time":"2026-03-01T18:44:48.749062Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-01T18:44:48.749322Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/gym-trading-env__dqn__1__1772390674\")","namespace":""}
+{"time":"2026-03-01T18:44:48.751861Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/gym-trading-env__dqn__1__1772390674/events.out.tfevents.1772390678.Esthers-MacBook-Pro.local.50921.0","runPath":"runs/gym-trading-env__dqn__1__1772390674/events.out.tfevents.1772390678.Esthers-MacBook-Pro.local.50921.0"}
+{"time":"2026-03-01T18:44:49.520593Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-01T18:44:49.758403Z","level":"INFO","msg":"handler: closed","stream_id":"u105372w"}
+{"time":"2026-03-01T18:44:49.758717Z","level":"INFO","msg":"sender: closed","stream_id":"u105372w"}
+{"time":"2026-03-01T18:44:49.758753Z","level":"INFO","msg":"stream: closed","id":"u105372w"}

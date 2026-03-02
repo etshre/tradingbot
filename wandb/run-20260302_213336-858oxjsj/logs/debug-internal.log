@@ -1,0 +1,15 @@
+{"time":"2026-03-02T21:33:36.46682Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-02T21:33:36.477713Z","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-02T21:33:36.772392Z","level":"INFO","msg":"stream: created new stream","id":"858oxjsj"}
+{"time":"2026-03-02T21:33:36.772474Z","level":"INFO","msg":"handler: started","stream_id":"858oxjsj"}
+{"time":"2026-03-02T21:33:36.772911Z","level":"INFO","msg":"stream: started","id":"858oxjsj"}
+{"time":"2026-03-02T21:33:36.772973Z","level":"INFO","msg":"sender: started","stream_id":"858oxjsj"}
+{"time":"2026-03-02T21:33:36.772937Z","level":"INFO","msg":"writer: started","stream_id":"858oxjsj"}
+{"time":"2026-03-02T21:33:37.559354Z","level":"INFO","msg":"stream: closing","id":"858oxjsj"}
+{"time":"2026-03-02T21:33:47.536195Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-02T21:33:47.536461Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1772487214\")","namespace":""}
+{"time":"2026-03-02T21:33:47.537441Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1772487214/events.out.tfevents.1772487217.MacBookPro.lan.61168.0","runPath":"runs/TradingEnv__dqn__1__1772487214/events.out.tfevents.1772487217.MacBookPro.lan.61168.0"}
+{"time":"2026-03-02T21:33:48.143086Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-02T21:33:48.423161Z","level":"INFO","msg":"handler: closed","stream_id":"858oxjsj"}
+{"time":"2026-03-02T21:33:48.423595Z","level":"INFO","msg":"sender: closed","stream_id":"858oxjsj"}
+{"time":"2026-03-02T21:33:48.423648Z","level":"INFO","msg":"stream: closed","id":"858oxjsj"}

@@ -1,0 +1,22 @@
+2026-03-01 18:44:36,923 INFO    MainThread:50921 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-01 18:44:36,923 INFO    MainThread:50921 [wandb_setup.py:_flush():81] Configure stats pid to 50921
+2026-03-01 18:44:36,923 INFO    MainThread:50921 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-01 18:44:36,923 INFO    MainThread:50921 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /Users/emerald/code/tradingbot/wandb/run-20260301_184436-u105372w/logs/debug.log
+2026-03-01 18:44:36,923 INFO    MainThread:50921 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /Users/emerald/code/tradingbot/wandb/run-20260301_184436-u105372w/logs/debug-internal.log
+2026-03-01 18:44:36,929 INFO    MainThread:50921 [wandb_init.py:init():844] calling init triggers
+2026-03-01 18:44:36,929 INFO    MainThread:50921 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'exp_name': 'dqn', 'seed': 1, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'trading', 'wandb_entity': '', 'capture_video': False, 'save_model': True, 'upload_model': False, 'hf_entity': '', 'env_id': 'gym-trading-env', 'total_timesteps': 500000, 'learning_rate': 0.00025, 'num_envs': 10, 'buffer_size': 10000, 'gamma': 0.99, 'tau': 1.0, 'target_network_frequency': 500, 'batch_size': 128, 'start_e': 1, 'end_e': 0.05, 'exploration_fraction': 0.5, 'learning_starts': 10000, 'train_frequency': 10, 'data_path': 'nvda_stock_data.csv', 'window_size': 30, '_wandb': {'code_path': 'code/dqn.py'}}
+2026-03-01 18:44:36,929 INFO    MainThread:50921 [wandb_init.py:init():892] starting backend
+2026-03-01 18:44:37,205 INFO    MainThread:50921 [wandb_init.py:init():895] sending inform_init request
+2026-03-01 18:44:37,276 INFO    MainThread:50921 [wandb_init.py:init():903] backend started and connected
+2026-03-01 18:44:37,319 INFO    MainThread:50921 [wandb_init.py:init():973] updated telemetry
+2026-03-01 18:44:37,394 INFO    MainThread:50921 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-01 18:44:38,482 INFO    MainThread:50921 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-01 18:44:38,740 INFO    MainThread:50921 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-01 18:44:38,740 INFO    MainThread:50921 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-01 18:44:38,740 INFO    MainThread:50921 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-01 18:44:38,741 INFO    MainThread:50921 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-01 18:44:38,746 INFO    MainThread:50921 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-01 18:44:38,747 INFO    MainThread:50921 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/gym-trading-env__dqn__1__1772390674, True
+2026-03-01 18:44:38,781 INFO    wandb-AsyncioManager-main:50921 [service_client.py:_forward_responses():134] Reached EOF.
+2026-03-01 18:44:38,781 INFO    wandb-AsyncioManager-main:50921 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.

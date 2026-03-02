@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/utils/history.py", line 46, in __getitem__
+    column_index = self.columns.index(column)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 'Position' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 217, in <module>
+    next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+                                                          ^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/vector/sync_vector_env.py", line 222, in step
+    ) = self.envs[i].step(action)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/wrappers/common.py", line 513, in step
+    obs, reward, terminated, truncated, info = super().step(action)
+                                               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/core.py", line 322, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 270, in step
+    self.calculate_metrics()
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/environments.py", line 286, in calculate_metrics
+    self.results_metrics[metric['name']] = metric['function'](self.historical_info)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/dqn.py", line 108, in <lambda>
+    env.unwrapped.add_metric('Position', lambda history: history['Position', -1])
+                                                         ~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gym_trading_env/utils/history.py", line 48, in __getitem__
+    raise ValueError(f"Feature {column} does not exist ... Check the available features : {self.columns}")
+ValueError: Feature Position does not exist ... Check the available features : ['idx', 'step', 'date', 'position_index', 'position', 'real_position', 'data_adj close', 'data_close', 'data_volume', 'data_low', 'data_high', 'data_open', 'data_sma_50', 'portfolio_valuation', 'portfolio_distribution_asset', 'portfolio_distribution_fiat', 'portfolio_distribution_borrowed_asset', 'portfolio_distribution_borrowed_fiat', 'portfolio_distribution_interest_asset', 'portfolio_distribution_interest_fiat', 'reward']

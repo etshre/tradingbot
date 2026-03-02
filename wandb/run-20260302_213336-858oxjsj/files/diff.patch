@@ -1,0 +1,100 @@
+diff --git a/__pycache__/testing_wandb.cpython-312.pyc b/__pycache__/testing_wandb.cpython-312.pyc
+index 3b9e606..6a7dc1f 100644
+Binary files a/__pycache__/testing_wandb.cpython-312.pyc and b/__pycache__/testing_wandb.cpython-312.pyc differ
+diff --git a/dqn.py b/dqn.py
+index e80e8b5..b8685b4 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -14,6 +14,7 @@ import torch.optim as optim
+ import tyro
+ import os
+ from torch.utils.tensorboard import SummaryWriter
++import gym_trading_env
+ 
+ from cleanrl_utils.buffers import ReplayBuffer
+ 
+@@ -44,7 +45,7 @@ class Args:
+     """the user or org name of the model repository from the Hugging Face Hub"""
+ 
+     # Algorithm specific arguments
+-    env_id: str = "gym-trading-env"
++    env_id: str = "TradingEnv"
+     """the id of the environment"""
+     total_timesteps: int = 500000
+     """total timesteps of the experiments"""
+@@ -81,17 +82,26 @@ class Args:
+ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+     def thunk():
+         df = pd.read_csv(data_path, parse_dates=True, index_col='Date')
++        df.columns = [col.lower() for col in df.columns]
+         #sma 50
+         df['sma_50'] = df['Close'].rolling(window=50).mean()
+ 
+         #remove the first 49
+         df = df.dropna()
+ 
++
++
+         if capture_video and idx == 0:
+             env = gym.make(env_id, render_mode="rgb_array")
+             env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+         else:
+-            env = gym.make(env_id)
++            env = gym.make(
++                env_id,
++                df=df,
++                windows=30,
++                positions = [-1, 0, 1],
++                trading_fees = 0.05/100,
++                )
+         env = gym.wrappers.RecordEpisodeStatistics(env)
+         env.action_space.seed(seed)
+ 
+@@ -129,9 +139,9 @@ if __name__ == "__main__":
+     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+ 
+     if args.track:
+-        import testing_wandb
++        import wandb
+ 
+-        testing_wandb.init(
++        wandb.init(
+             project=args.wandb_project_name,
+             entity=args.wandb_entity,
+             sync_tensorboard=True,
+@@ -156,7 +166,7 @@ if __name__ == "__main__":
+ 
+     # env setup
+     envs = gym.vector.SyncVectorEnv(
+-        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
++        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name, args.data_path) for i in range(args.num_envs)]
+     )
+     assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+ 
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 4224743..0f0e775 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug-internal.log
+\ No newline at end of file
++run-20260302_213336-858oxjsj/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index da0a74a..b58a519 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug.log
+\ No newline at end of file
++run-20260302_213336-858oxjsj/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index f770243..f9bcf03 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj
+\ No newline at end of file
++run-20260302_213336-858oxjsj
+\ No newline at end of file

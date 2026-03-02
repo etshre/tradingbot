@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 166, in <module>
+    envs = gym.vector.SyncVectorEnv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/vector/sync_vector_env.py", line 86, in __init__
+    self.envs = [env_fn() for env_fn in env_fns]
+                 ^^^^^^^^
+  File "/Users/emerald/code/tradingbot/dqn.py", line 96, in thunk
+    env = gym.make(
+          ^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 687, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 531, in _find_spec
+    _check_version_exists(ns, name, version)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 397, in _check_version_exists
+    _check_name_exists(ns, name)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 374, in _check_name_exists
+    raise error.NameNotFound(
+gymnasium.error.NameNotFound: Environment `gym-trading-env` doesn't exist.

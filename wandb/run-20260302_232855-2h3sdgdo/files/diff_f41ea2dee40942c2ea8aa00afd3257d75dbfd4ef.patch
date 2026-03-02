@@ -1,0 +1,205 @@
+diff --git a/__pycache__/testing_wandb.cpython-312.pyc b/__pycache__/testing_wandb.cpython-312.pyc
+index 3b9e606..6a7dc1f 100644
+Binary files a/__pycache__/testing_wandb.cpython-312.pyc and b/__pycache__/testing_wandb.cpython-312.pyc differ
+diff --git a/dqn.py b/dqn.py
+index e80e8b5..dd58636 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -14,6 +14,8 @@ import torch.optim as optim
+ import tyro
+ import os
+ from torch.utils.tensorboard import SummaryWriter
++import gym_trading_env
++import yfinance as yf
+ 
+ from cleanrl_utils.buffers import ReplayBuffer
+ 
+@@ -44,7 +46,7 @@ class Args:
+     """the user or org name of the model repository from the Hugging Face Hub"""
+ 
+     # Algorithm specific arguments
+-    env_id: str = "gym-trading-env"
++    env_id: str = "TradingEnv"
+     """the id of the environment"""
+     total_timesteps: int = 500000
+     """total timesteps of the experiments"""
+@@ -81,17 +83,30 @@ class Args:
+ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+     def thunk():
+         df = pd.read_csv(data_path, parse_dates=True, index_col='Date')
++        df.columns = [col.lower() for col in df.columns]
+         #sma 50
+-        df['sma_50'] = df['Close'].rolling(window=50).mean()
++        df['sma_50'] = df['close'].rolling(window=50).mean()
+ 
+         #remove the first 49
+         df = df.dropna()
+ 
++
++
+         if capture_video and idx == 0:
+-            env = gym.make(env_id, render_mode="rgb_array")
++            env = gym.make(env_id, render_mode="logs")
+             env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+         else:
+-            env = gym.make(env_id)
++            env = gym.make(
++                env_id,
++                df=df,
++                windows=30,
++                positions = [-1, 0, 1],
++                trading_fees = 0.05/100,
++                name=f'env_{idx}',
++                )
++            
++        env.unwrapped.add_metric('position', lambda history: history['position', -1])
++        env.unwrapped.add_metric('Portfolio Val', lambda history: history['portfolio_valuation', -1])
+         env = gym.wrappers.RecordEpisodeStatistics(env)
+         env.action_space.seed(seed)
+ 
+@@ -105,6 +120,7 @@ class QNetwork(nn.Module):
+     def __init__(self, env):
+         super().__init__()
+         self.network = nn.Sequential(
++            nn.Flatten(),
+             nn.Linear(np.array(env.single_observation_space.shape).prod(), 120),
+             nn.ReLU(),
+             nn.Linear(120, 84),
+@@ -123,15 +139,27 @@ def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
+ 
+ if __name__ == "__main__":
+     args = tyro.cli(Args)
++    #add yfinance for more stock data
++    if not os.path.exists(args.data_path):
++        print(f'Download data for {args.data_path}...')
++        df_download = yf.download('SPY', period='5y', interval='1d')
++
++        #flatten value
++        if isinstance(df_download.columns, pd.MultiIndex):
++            df_download.columns = df_download.columns.get_level_values(0)
++
++        df_download.to_csv(args.data_path)
++        print('downloaded as a csv completed.')
++
+     #match num_envs
+     assert args.num_envs == 10, "vectorized envs are not supported at the moment"
+ 
+     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+ 
+     if args.track:
+-        import testing_wandb
++        import wandb
+ 
+-        testing_wandb.init(
++        wandb.init(
+             project=args.wandb_project_name,
+             entity=args.wandb_entity,
+             sync_tensorboard=True,
+@@ -156,7 +184,7 @@ if __name__ == "__main__":
+ 
+     # env setup
+     envs = gym.vector.SyncVectorEnv(
+-        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
++        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name, args.data_path) for i in range(args.num_envs)]
+     )
+     assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+ 
+@@ -170,6 +198,7 @@ if __name__ == "__main__":
+         envs.single_observation_space,
+         envs.single_action_space,
+         device,
++        n_envs=args.num_envs,
+         handle_timeout_termination=False,
+     )
+     start_time = time.time()
+@@ -195,12 +224,21 @@ if __name__ == "__main__":
+                     print(f"global_step={global_step}, episodic_return={info['episode']['r']}")
+                     writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                     writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
++                    writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
++                    writer.add_scalar('performance/market_return', info.get('market_return', 100))
++                    if args.track:
++                        wandb.log ({
++                            'performance/portfolio_return': info['episode']['r'],
++                            'performance/market_return': info.get('market_return', 100), # The baseline
++                            'global_step': global_step,
++                        })
+ 
+         # TRY NOT TO MODIFY: save data to reply buffer; handle `final_observation`
+         real_next_obs = next_obs.copy()
+-        for idx, trunc in enumerate(truncations):
+-            if trunc:
+-                real_next_obs[idx] = infos["final_observation"][idx]
++        if 'final_observation' in infos:
++            for idx, final_obs in enumerate(infos["final_observation"]):
++                if final_obs is not None:
++                    real_next_obs[idx] = final_obs
+         rb.add(obs, real_next_obs, actions, rewards, terminations, infos)
+ 
+         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
+@@ -240,16 +278,18 @@ if __name__ == "__main__":
+         print(f"model saved to {model_path}")
+         from cleanrl_utils.evals.dqn_eval import evaluate
+ 
+-        episodic_returns = evaluate(
+-            model_path,
+-            make_env,
+-            args.env_id,
+-            eval_episodes=10,
+-            run_name=f"{run_name}-eval",
+-            Model=QNetwork,
+-            device=device,
+-            epsilon=args.end_e,
+-        )
++        # episodic_returns = evaluate(
++        #     model_path,
++        #     lambda env_id, seed, idx, capture_video, run_name: make_env (
++        #         env_id, seed, idx, capture_video, run_name, args.data_path
++        #     ),
++        #     args.env_id,
++        #     eval_episodes=10,
++        #     run_name=f"{run_name}-eval",
++        #     Model=QNetwork,
++        #     device=device,
++        #     epsilon=args.end_e,
++        # )
+         for idx, episodic_return in enumerate(episodic_returns):
+             writer.add_scalar("eval/episodic_return", episodic_return, idx)
+ 
+@@ -261,4 +301,9 @@ if __name__ == "__main__":
+             push_to_hub(args, episodic_returns, repo_id, "DQN", f"runs/{run_name}", f"videos/{run_name}-eval")
+ 
+     envs.close()
++    envs.call('save_for_render')
++    # make chart to see data
++    print("Generating interactive chart...")
++    envs.envs[0].unwrapped.save_for_render(dir="render")
++    print("Chart saved to the 'render' folder. Open the HTML file in your browser!")
+     writer.close()
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 4224743..a200cc3 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug-internal.log
+\ No newline at end of file
++run-20260302_232855-2h3sdgdo/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index da0a74a..99b97bc 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug.log
+\ No newline at end of file
++run-20260302_232855-2h3sdgdo/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index f770243..4eab358 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj
+\ No newline at end of file
++run-20260302_232855-2h3sdgdo
+\ No newline at end of file

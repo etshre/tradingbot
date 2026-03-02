@@ -1,0 +1,49 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            8m8b9914hub89xlegdcbvw3wwccrlthn:
+                codePath: dqn.py
+                codePathLocal: dqn.py
+                cpu_count: 6
+                cpu_count_logical: 12
+                disk:
+                    /:
+                        total: "357000257536"
+                        used: "318289936384"
+                email: estherr.w54@gmail.com
+                executable: /Users/emerald/code/tradingbot/.venv/bin/python
+                git:
+                    commit: f41ea2dee40942c2ea8aa00afd3257d75dbfd4ef
+                    remote: https://github.com/etshre/tradingbot.git
+                host: Esthers-MacBook-Pro.local
+                memory:
+                    total: "17179869184"
+                os: macOS-26.3-x86_64-i386-64bit
+                program: /Users/emerald/code/tradingbot/dqn.py
+                python: CPython 3.12.3
+                root: /Users/emerald/code/tradingbot
+                startedAt: "2026-03-01T18:09:46.797302Z"
+                writerId: 8m8b9914hub89xlegdcbvw3wwccrlthn
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 16
+            "4": 3.12.3
+            "5": 0.25.0
+            "12": 0.25.0
+            "13": darwin-x86_64
+architecture:
+    value: CNN
+dataset:
+    value: CIFAR-100
+epochs:
+    value: 10
+learning_rate:
+    value: 0.02

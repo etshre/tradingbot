@@ -1,0 +1,15 @@
+{"time":"2026-03-02T22:41:36.317224Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-02T22:41:36.32894Z","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-02T22:41:36.647253Z","level":"INFO","msg":"stream: created new stream","id":"1flhmwka"}
+{"time":"2026-03-02T22:41:36.647366Z","level":"INFO","msg":"handler: started","stream_id":"1flhmwka"}
+{"time":"2026-03-02T22:41:36.648431Z","level":"INFO","msg":"stream: started","id":"1flhmwka"}
+{"time":"2026-03-02T22:41:36.648593Z","level":"INFO","msg":"sender: started","stream_id":"1flhmwka"}
+{"time":"2026-03-02T22:41:36.648673Z","level":"INFO","msg":"writer: started","stream_id":"1flhmwka"}
+{"time":"2026-03-02T22:41:39.591052Z","level":"INFO","msg":"stream: closing","id":"1flhmwka"}
+{"time":"2026-03-02T22:41:47.305043Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-02T22:41:47.305176Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1772491294\")","namespace":""}
+{"time":"2026-03-02T22:41:47.305595Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1772491294/events.out.tfevents.1772491297.MacBookPro.lan.65329.0","runPath":"runs/TradingEnv__dqn__1__1772491294/events.out.tfevents.1772491297.MacBookPro.lan.65329.0"}
+{"time":"2026-03-02T22:41:47.780319Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-02T22:41:48.136359Z","level":"INFO","msg":"handler: closed","stream_id":"1flhmwka"}
+{"time":"2026-03-02T22:41:48.136688Z","level":"INFO","msg":"sender: closed","stream_id":"1flhmwka"}
+{"time":"2026-03-02T22:41:48.136724Z","level":"INFO","msg":"stream: closed","id":"1flhmwka"}

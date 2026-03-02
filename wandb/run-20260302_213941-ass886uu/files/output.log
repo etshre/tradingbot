@@ -1,0 +1,15 @@
+Market Return : 1126.33%   |   Portfolio Return : -49.02%   |
+Market Return : 1126.33%   |   Portfolio Return : -63.08%   |
+Market Return : 1126.33%   |   Portfolio Return : -7.40%   |
+Market Return : 1126.33%   |   Portfolio Return : -83.54%   |
+Market Return : 1126.33%   |   Portfolio Return : -36.94%   |
+Market Return : 1126.33%   |   Portfolio Return : -81.80%   |
+Market Return : 1126.33%   |   Portfolio Return : 51.86%   |
+Market Return : 1126.33%   |   Portfolio Return : -78.25%   |
+Market Return : 1126.33%   |   Portfolio Return : -62.47%   |
+Market Return : 1126.33%   |   Portfolio Return :  1.41%   |
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 215, in <module>
+    real_next_obs[idx] = infos["final_observation"][idx]
+                         ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'final_observation'

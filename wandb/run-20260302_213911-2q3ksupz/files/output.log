@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 174, in <module>
+    q_network = QNetwork(envs).to(device)
+                ^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/dqn.py", line 117, in __init__
+    self.network = nn.Sequential(
+                   ^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 106, in __init__
+    self.add_module(str(idx), module)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 607, in add_module
+    raise TypeError(f"{torch.typename(module)} is not a Module subclass")
+TypeError: torch.nn.modules.flatten.Flatten is not a Module subclass

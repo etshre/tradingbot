@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 159, in <module>
+    [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_env() missing 1 required positional argument: 'data_path'

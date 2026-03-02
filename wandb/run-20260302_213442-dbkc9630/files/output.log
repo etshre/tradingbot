@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 214, in <module>
+    rb.add(obs, real_next_obs, actions, rewards, terminations, infos)
+  File "/Users/emerald/code/tradingbot/cleanrl_utils/buffers.py", line 355, in add
+    action = action.reshape((self.n_envs, self.action_dim))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 10 into shape (1,1)

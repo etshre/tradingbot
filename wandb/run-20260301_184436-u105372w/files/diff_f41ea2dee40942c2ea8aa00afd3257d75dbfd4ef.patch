@@ -1,0 +1,55 @@
+diff --git a/__pycache__/testing_wandb.cpython-312.pyc b/__pycache__/testing_wandb.cpython-312.pyc
+index 3b9e606..6a7dc1f 100644
+Binary files a/__pycache__/testing_wandb.cpython-312.pyc and b/__pycache__/testing_wandb.cpython-312.pyc differ
+diff --git a/dqn.py b/dqn.py
+index e80e8b5..7d97b9f 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -129,9 +129,9 @@ if __name__ == "__main__":
+     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+ 
+     if args.track:
+-        import testing_wandb
++        import wandb
+ 
+-        testing_wandb.init(
++        wandb.init(
+             project=args.wandb_project_name,
+             entity=args.wandb_entity,
+             sync_tensorboard=True,
+@@ -156,7 +156,7 @@ if __name__ == "__main__":
+ 
+     # env setup
+     envs = gym.vector.SyncVectorEnv(
+-        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
++        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name, args.data_path) for i in range(args.num_envs)]
+     )
+     assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+ 
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 4224743..08efde6 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug-internal.log
+\ No newline at end of file
++run-20260301_184436-u105372w/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index da0a74a..282c9e9 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj/logs/debug.log
+\ No newline at end of file
++run-20260301_184436-u105372w/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index f770243..3e4e0bd 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260301_175350-we0k1exj
+\ No newline at end of file
++run-20260301_184436-u105372w
+\ No newline at end of file
