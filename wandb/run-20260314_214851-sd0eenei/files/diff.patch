@@ -1,0 +1,98 @@
+diff --git a/dqn.py b/dqn.py
+index a964341..8db26b3 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -101,7 +101,7 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+                 df=df,
+                 windows=30,
+                 positions = [-1, 0, 1],
+-                trading_fees = 0.05/100,
++                trading_fees = 0.01/100,
+                 name=f'env_{idx}',
+                 )
+             
+@@ -278,32 +278,33 @@ if __name__ == "__main__":
+         print(f"model saved to {model_path}")
+         from cleanrl_utils.evals.dqn_eval import evaluate
+ 
+-        # episodic_returns = evaluate(
+-        #     model_path,
+-        #     lambda env_id, seed, idx, capture_video, run_name: make_env (
+-        #         env_id, seed, idx, capture_video, run_name, args.data_path
+-        #     ),
+-        #     args.env_id,
+-        #     eval_episodes=10,
+-        #     run_name=f"{run_name}-eval",
+-        #     Model=QNetwork,
+-        #     device=device,
+-        #     epsilon=args.end_e,
+-        # )
+-        # for idx, episodic_return in enumerate(episodic_returns):
+-        #     writer.add_scalar("eval/episodic_return", episodic_return, idx)
+-
+-        # if args.upload_model:
+-        #     from cleanrl_utils.huggingface import push_to_hub
+-
+-        #     repo_name = f"{args.env_id}-{args.exp_name}-seed{args.seed}"
+-        #     repo_id = f"{args.hf_entity}/{repo_name}" if args.hf_entity else repo_name
+-        #     push_to_hub(args, episodic_returns, repo_id, "DQN", f"runs/{run_name}", f"videos/{run_name}-eval")
+-
+-    envs.close()
+-    envs.call('save_for_render')
++        try:
++            print("Starting evaluation...")
++            episodic_returns = evaluate(
++                model_path,
++                lambda env_id, seed, idx, capture_video, run_name: make_env(
++                    env_id, seed, idx, capture_video, run_name, args.data_path
++                ),
++                args.env_id,
++                eval_episodes=5,
++                run_name=f"{run_name}-eval",
++                Model=QNetwork,
++                device=device,
++                epsilon=0.05,
++            )
++            for idx, episodic_return in enumerate(episodic_returns):
++                writer.add_scalar("eval/episodic_return", episodic_return, idx)
++        except Exception as e:
++            print(f"Evaluation failed, but training is saved: {e}")
++                    
+     # make chart to see data
+     print("Generating interactive chart...")
+     envs.envs[0].unwrapped.save_for_render(dir="render")
+     print("Chart saved to the 'render' folder. Open the HTML file in your browser!")
++            
++    envs.close()
+     writer.close()
++    if args.track:
++        import wandb
++        wandb.finish()
++
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index a200cc3..b5b180a 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260302_232855-2h3sdgdo/logs/debug-internal.log
+\ No newline at end of file
++run-20260314_214851-sd0eenei/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 99b97bc..3fcb33b 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260302_232855-2h3sdgdo/logs/debug.log
+\ No newline at end of file
++run-20260314_214851-sd0eenei/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 4eab358..ec37bf6 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260302_232855-2h3sdgdo
+\ No newline at end of file
++run-20260314_214851-sd0eenei
+\ No newline at end of file

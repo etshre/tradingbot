@@ -101,7 +101,7 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
                 df=df,
                 windows=30,
                 positions = [-1, 0, 1],
-                trading_fees = 0.01/100,
+                trading_fees = 0.05/100,
                 name=f'env_{idx}',
                 )
             
@@ -259,16 +259,6 @@ if __name__ == "__main__":
                     writer.add_scalar("losses/q_values", old_val.mean().item(), global_step)
                     print("SPS:", int(global_step / (time.time() - start_time)))
                     writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
-                    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
-                    writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
-                    writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
-                    writer.add_scalar('performance/market_return', info.get('market_return', 100))
-                    if args.track:
-                        wandb.log ({
-                            'performance/portfolio_return': info['episode']['r'],
-                            'performance/market_return': info.get('market_return', 100), # The baseline
-                            'global_step': global_step,
-                        })
 
                 # optimize the model
                 optimizer.zero_grad()
@@ -288,33 +278,32 @@ if __name__ == "__main__":
         print(f"model saved to {model_path}")
         from cleanrl_utils.evals.dqn_eval import evaluate
 
-        try:
-            print("Starting evaluation...")
-            episodic_returns = evaluate(
-                model_path,
-                lambda env_id, seed, idx, capture_video, run_name: make_env(
-                    env_id, seed, idx, capture_video, run_name, args.data_path
-                ),
-                args.env_id,
-                eval_episodes=5,
-                run_name=f"{run_name}-eval",
-                Model=QNetwork,
-                device=device,
-                epsilon=0.05,
-            )
-            for idx, episodic_return in enumerate(episodic_returns):
-                writer.add_scalar("eval/episodic_return", episodic_return, idx)
-        except Exception as e:
-            print(f"Evaluation failed, but training is saved: {e}")
-                    
+        # episodic_returns = evaluate(
+        #     model_path,
+        #     lambda env_id, seed, idx, capture_video, run_name: make_env (
+        #         env_id, seed, idx, capture_video, run_name, args.data_path
+        #     ),
+        #     args.env_id,
+        #     eval_episodes=10,
+        #     run_name=f"{run_name}-eval",
+        #     Model=QNetwork,
+        #     device=device,
+        #     epsilon=args.end_e,
+        # )
+        # for idx, episodic_return in enumerate(episodic_returns):
+        #     writer.add_scalar("eval/episodic_return", episodic_return, idx)
+
+        # if args.upload_model:
+        #     from cleanrl_utils.huggingface import push_to_hub
+
+        #     repo_name = f"{args.env_id}-{args.exp_name}-seed{args.seed}"
+        #     repo_id = f"{args.hf_entity}/{repo_name}" if args.hf_entity else repo_name
+        #     push_to_hub(args, episodic_returns, repo_id, "DQN", f"runs/{run_name}", f"videos/{run_name}-eval")
+
+    envs.close()
+    envs.call('save_for_render')
     # make chart to see data
     print("Generating interactive chart...")
     envs.envs[0].unwrapped.save_for_render(dir="render")
     print("Chart saved to the 'render' folder. Open the HTML file in your browser!")
-            
-    envs.close()
     writer.close()
-    if args.track:
-        import wandb
-        wandb.finish()
-
