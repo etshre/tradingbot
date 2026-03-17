@@ -1,0 +1,25 @@
+2026-03-15 10:22:48,617 INFO    MainThread:23719 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-15 10:22:48,617 INFO    MainThread:23719 [wandb_setup.py:_flush():81] Configure stats pid to 23719
+2026-03-15 10:22:48,617 INFO    MainThread:23719 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-15 10:22:48,617 INFO    MainThread:23719 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /Users/emerald/code/tradingbot/wandb/run-20260315_102248-2el27t8h/logs/debug.log
+2026-03-15 10:22:48,617 INFO    MainThread:23719 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /Users/emerald/code/tradingbot/wandb/run-20260315_102248-2el27t8h/logs/debug-internal.log
+2026-03-15 10:22:48,624 INFO    MainThread:23719 [wandb_init.py:init():844] calling init triggers
+2026-03-15 10:22:48,624 INFO    MainThread:23719 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'exp_name': 'dqn', 'seed': 1, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'trading', 'wandb_entity': '', 'capture_video': False, 'save_model': True, 'upload_model': False, 'hf_entity': '', 'env_id': 'TradingEnv', 'total_timesteps': 500000, 'learning_rate': 0.00025, 'num_envs': 10, 'buffer_size': 10000, 'gamma': 0.99, 'tau': 1.0, 'target_network_frequency': 500, 'batch_size': 128, 'start_e': 1, 'end_e': 0.05, 'exploration_fraction': 0.5, 'learning_starts': 10000, 'train_frequency': 10, 'data_path': 'nvda_stock_data.csv', 'window_size': 30, '_wandb': {'code_path': 'code/dqn.py'}}
+2026-03-15 10:22:48,624 INFO    MainThread:23719 [wandb_init.py:init():892] starting backend
+2026-03-15 10:22:48,889 INFO    MainThread:23719 [wandb_init.py:init():895] sending inform_init request
+2026-03-15 10:22:48,955 INFO    MainThread:23719 [wandb_init.py:init():903] backend started and connected
+2026-03-15 10:22:48,996 INFO    MainThread:23719 [wandb_init.py:init():973] updated telemetry
+2026-03-15 10:22:49,047 INFO    MainThread:23719 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-15 10:22:49,671 INFO    MainThread:23719 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-15 10:22:49,949 INFO    MainThread:23719 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-15 10:22:49,949 INFO    MainThread:23719 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-15 10:22:49,949 INFO    MainThread:23719 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-15 10:22:49,949 INFO    MainThread:23719 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-15 10:22:49,954 INFO    MainThread:23719 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-15 10:22:49,955 INFO    MainThread:23719 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/TradingEnv__dqn__1__1773570166, True
+2026-03-15 10:35:44,694 INFO    MainThread:23719 [wandb_run.py:_finish():2291] finishing run etshre-tradingbot/trading/2el27t8h
+2026-03-15 10:35:44,696 INFO    MainThread:23719 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-03-15 10:35:44,697 INFO    MainThread:23719 [wandb_run.py:_restore():2472] restore
+2026-03-15 10:35:44,697 INFO    MainThread:23719 [wandb_run.py:_restore():2478] restore done
+2026-03-15 10:35:46,549 INFO    MainThread:23719 [wandb_run.py:_footer_sync_info():3868] logging synced files

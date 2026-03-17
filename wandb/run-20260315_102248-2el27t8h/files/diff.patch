@@ -1,0 +1,96 @@
+diff --git a/dqn.py b/dqn.py
+index c941ba6..78b881e 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -244,6 +244,22 @@ if __name__ == "__main__":
+         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
+         obs = next_obs
+ 
++        #recording data
++        if "Portfolio Val" in infos and 'data_close' in infos:
++            current_price = infos["data_close"][0]
++            current_val = infos["Portfolio Val"][0]
++
++            writer.add_scalar("performance/stock_price", current_price, global_step)
++            writer.add_scalar("performance/portfolio_val", current_val, global_step)
++            
++            if args.track:
++                wandb.log({
++                    "performance/stock_price": current_price,
++                    "performance/portfolio_val": current_val,
++                    "charts/epsilon": epsilon,
++                    "global_step": global_step
++                })
++
+         # ALGO LOGIC: training.
+         if global_step > args.learning_starts:
+             if global_step % args.train_frequency == 0:
+@@ -259,16 +275,31 @@ if __name__ == "__main__":
+                     writer.add_scalar("losses/q_values", old_val.mean().item(), global_step)
+                     print("SPS:", int(global_step / (time.time() - start_time)))
+                     writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
+-                    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+-                    writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+-                    writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
+-                    writer.add_scalar('performance/market_return', info.get('market_return', 100))
+-                    if args.track:
+-                        wandb.log ({
+-                            'performance/portfolio_return': info['episode']['r'],
+-                            'performance/market_return': info.get('market_return', 100), # The baseline
+-                            'global_step': global_step,
+-                        })
++                    # writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
++                    # writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
++                    # writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
++                    # writer.add_scalar('performance/market_return', info.get('market_return', 100))
++                    # if args.track:
++                    #     wandb.log ({
++                    #         'performance/portfolio_return': info['episode']['r'],
++                    #         'performance/market_return': info.get('market_return', 100), # The baseline
++                    #         'global_step': global_step,
++                    #     })
++
++                    # if "Portfolio Val" in infos and 'data_close' in infos:
++                    #     current_price = infos["data_close"][0]
++                    #     current_val = infos["Portfolio Val"][0]
++
++                    #     writer.add_scalar("performance/stock_price", current_price, global_step)
++                    #     writer.add_scalar("performance/portfolio_val", current_val, global_step)
++                        
++                    #     if args.track:
++                    #         wandb.log({
++                    #             "performance/stock_price": current_price,
++                    #             "performance/portfolio_val": current_val,
++                    #             "charts/epsilon": epsilon,
++                    #             "global_step": global_step
++                    #         })
+ 
+                 # optimize the model
+                 optimizer.zero_grad()
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index b5b180a..a268fd3 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260314_214851-sd0eenei/logs/debug-internal.log
+\ No newline at end of file
++run-20260315_102248-2el27t8h/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 3fcb33b..b295559 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260314_214851-sd0eenei/logs/debug.log
+\ No newline at end of file
++run-20260315_102248-2el27t8h/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index ec37bf6..d361ac1 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260314_214851-sd0eenei
+\ No newline at end of file
++run-20260315_102248-2el27t8h
+\ No newline at end of file

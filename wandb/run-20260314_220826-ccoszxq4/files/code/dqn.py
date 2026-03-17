@@ -244,22 +244,6 @@ if __name__ == "__main__":
         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
         obs = next_obs
 
-        #recording data
-        if "Portfolio Val" in infos and 'data_close' in infos:
-            current_price = infos["data_close"][0]
-            current_val = infos["Portfolio Val"][0]
-
-            writer.add_scalar("performance/stock_price", current_price, global_step)
-            writer.add_scalar("performance/portfolio_val", current_val, global_step)
-            
-            if args.track:
-                wandb.log({
-                    "performance/stock_price": current_price,
-                    "performance/portfolio_val": current_val,
-                    "charts/epsilon": epsilon,
-                    "global_step": global_step
-                })
-
         # ALGO LOGIC: training.
         if global_step > args.learning_starts:
             if global_step % args.train_frequency == 0:
@@ -275,31 +259,16 @@ if __name__ == "__main__":
                     writer.add_scalar("losses/q_values", old_val.mean().item(), global_step)
                     print("SPS:", int(global_step / (time.time() - start_time)))
                     writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
-                    # writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
-                    # writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
-                    # writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
-                    # writer.add_scalar('performance/market_return', info.get('market_return', 100))
-                    # if args.track:
-                    #     wandb.log ({
-                    #         'performance/portfolio_return': info['episode']['r'],
-                    #         'performance/market_return': info.get('market_return', 100), # The baseline
-                    #         'global_step': global_step,
-                    #     })
-
-                    # if "Portfolio Val" in infos and 'data_close' in infos:
-                    #     current_price = infos["data_close"][0]
-                    #     current_val = infos["Portfolio Val"][0]
-
-                    #     writer.add_scalar("performance/stock_price", current_price, global_step)
-                    #     writer.add_scalar("performance/portfolio_val", current_val, global_step)
-                        
-                    #     if args.track:
-                    #         wandb.log({
-                    #             "performance/stock_price": current_price,
-                    #             "performance/portfolio_val": current_val,
-                    #             "charts/epsilon": epsilon,
-                    #             "global_step": global_step
-                    #         })
+                    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                    writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+                    writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
+                    writer.add_scalar('performance/market_return', info.get('market_return', 100))
+                    if args.track:
+                        wandb.log ({
+                            'performance/portfolio_return': info['episode']['r'],
+                            'performance/market_return': info.get('market_return', 100), # The baseline
+                            'global_step': global_step,
+                        })
 
                 # optimize the model
                 optimizer.zero_grad()

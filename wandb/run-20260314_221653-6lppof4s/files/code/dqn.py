@@ -244,22 +244,6 @@ if __name__ == "__main__":
         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
         obs = next_obs
 
-        #recording data
-        if "Portfolio Val" in infos and 'data_close' in infos:
-            current_price = infos["data_close"][0]
-            current_val = infos["Portfolio Val"][0]
-
-            writer.add_scalar("performance/stock_price", current_price, global_step)
-            writer.add_scalar("performance/portfolio_val", current_val, global_step)
-            
-            if args.track:
-                wandb.log({
-                    "performance/stock_price": current_price,
-                    "performance/portfolio_val": current_val,
-                    "charts/epsilon": epsilon,
-                    "global_step": global_step
-                })
-
         # ALGO LOGIC: training.
         if global_step > args.learning_starts:
             if global_step % args.train_frequency == 0:
@@ -286,20 +270,20 @@ if __name__ == "__main__":
                     #         'global_step': global_step,
                     #     })
 
-                    # if "Portfolio Val" in infos and 'data_close' in infos:
-                    #     current_price = infos["data_close"][0]
-                    #     current_val = infos["Portfolio Val"][0]
+                    if "Portfolio Val" in infos and 'data_close' in infos:
+                        current_price = infos["data_close"][0]
+                        current_val = infos["Portfolio Val"][0]
 
-                    #     writer.add_scalar("performance/stock_price", current_price, global_step)
-                    #     writer.add_scalar("performance/portfolio_val", current_val, global_step)
+                        writer.add_scalar("performance/stock_price", current_price, global_step)
+                        writer.add_scalar("performance/portfolio_val", current_val, global_step)
                         
-                    #     if args.track:
-                    #         wandb.log({
-                    #             "performance/stock_price": current_price,
-                    #             "performance/portfolio_val": current_val,
-                    #             "charts/epsilon": epsilon,
-                    #             "global_step": global_step
-                    #         })
+                        if args.track:
+                            wandb.log({
+                                "performance/stock_price": current_price,
+                                "performance/portfolio_val": current_val,
+                                "charts/epsilon": epsilon,
+                                "global_step": global_step
+                            })
 
                 # optimize the model
                 optimizer.zero_grad()
