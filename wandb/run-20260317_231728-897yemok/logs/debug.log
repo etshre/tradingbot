@@ -1,0 +1,106 @@
+2026-03-17 23:17:28,211 INFO    MainThread:46485 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-17 23:17:28,212 INFO    MainThread:46485 [wandb_setup.py:_flush():81] Configure stats pid to 46485
+2026-03-17 23:17:28,212 INFO    MainThread:46485 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-17 23:17:28,212 INFO    MainThread:46485 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /Users/emerald/code/tradingbot/wandb/run-20260317_231728-897yemok/logs/debug.log
+2026-03-17 23:17:28,212 INFO    MainThread:46485 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /Users/emerald/code/tradingbot/wandb/run-20260317_231728-897yemok/logs/debug-internal.log
+2026-03-17 23:17:28,218 INFO    MainThread:46485 [wandb_init.py:init():844] calling init triggers
+2026-03-17 23:17:28,218 INFO    MainThread:46485 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'exp_name': 'dqn', 'seed': 1, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'trading', 'wandb_entity': '', 'capture_video': False, 'save_model': True, 'upload_model': False, 'hf_entity': '', 'env_id': 'TradingEnv', 'total_timesteps': 500000, 'learning_rate': 0.00025, 'num_envs': 10, 'buffer_size': 10000, 'gamma': 0.99, 'tau': 1.0, 'target_network_frequency': 500, 'batch_size': 128, 'start_e': 1, 'end_e': 0.05, 'exploration_fraction': 0.5, 'learning_starts': 10000, 'train_frequency': 10, 'data_path': 'nvda_stock_data.csv', 'window_size': 30, '_wandb': {'code_path': 'code/dqn.py'}}
+2026-03-17 23:17:28,218 INFO    MainThread:46485 [wandb_init.py:init():892] starting backend
+2026-03-17 23:17:28,503 INFO    MainThread:46485 [wandb_init.py:init():895] sending inform_init request
+2026-03-17 23:17:28,648 INFO    MainThread:46485 [wandb_init.py:init():903] backend started and connected
+2026-03-17 23:17:28,693 INFO    MainThread:46485 [wandb_init.py:init():973] updated telemetry
+2026-03-17 23:17:28,748 INFO    MainThread:46485 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-17 23:18:18,800 INFO    Thread-2 (wrapped_target):46485 [retry.py:__call__():167] [no run ID] Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/sdk/lib/retry.py", line 160, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 394, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 70, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-03-17 23:18:47,910 INFO    MainThread:46485 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-17 23:18:48,937 INFO    MainThread:46485 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-17 23:18:48,938 INFO    MainThread:46485 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-17 23:18:48,938 INFO    MainThread:46485 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-17 23:18:48,939 INFO    MainThread:46485 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-17 23:18:49,019 INFO    MainThread:46485 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-17 23:18:49,044 INFO    MainThread:46485 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/TradingEnv__dqn__1__1773789436, True
+2026-03-17 23:40:26,636 INFO    MainThread:46485 [wandb_run.py:_finish():2291] finishing run etshre-tradingbot/trading/897yemok
+2026-03-17 23:40:26,647 INFO    MainThread:46485 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-03-17 23:40:26,650 INFO    MainThread:46485 [wandb_run.py:_restore():2472] restore
+2026-03-17 23:40:26,651 INFO    MainThread:46485 [wandb_run.py:_restore():2478] restore done
+2026-03-17 23:40:32,302 INFO    MainThread:46485 [wandb_run.py:_footer_sync_info():3868] logging synced files

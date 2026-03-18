@@ -1,0 +1,40 @@
+diff --git a/dqn.py b/dqn.py
+index 78b881e..1cddca2 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -139,6 +139,8 @@ def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
+ 
+ if __name__ == "__main__":
+     args = tyro.cli(Args)
++    #please just track my logs i beg of you
++    args.track = True
+     #add yfinance for more stock data
+     if not os.path.exists(args.data_path):
+         print(f'Download data for {args.data_path}...')
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index a268fd3..0bb133e 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug-internal.log
+\ No newline at end of file
++run-20260317_231728-897yemok/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index b295559..b1be534 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug.log
+\ No newline at end of file
++run-20260317_231728-897yemok/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index d361ac1..7709664 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h
+\ No newline at end of file
++run-20260317_231728-897yemok
+\ No newline at end of file

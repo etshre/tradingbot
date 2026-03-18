@@ -1,0 +1,220 @@
+diff --git a/dqn.py b/dqn.py
+index 78b881e..3e903aa 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -12,7 +12,6 @@ import torch.nn as nn
+ import torch.nn.functional as F
+ import torch.optim as optim
+ import tyro
+-import os
+ from torch.utils.tensorboard import SummaryWriter
+ import gym_trading_env
+ import yfinance as yf
+@@ -52,7 +51,7 @@ class Args:
+     """total timesteps of the experiments"""
+     learning_rate: float = 2.5e-4
+     """the learning rate of the optimizer"""
+-    num_envs: int = 10
++    num_envs: int = 1
+     """the number of parallel game environments"""
+     buffer_size: int = 10000
+     """the replay memory buffer size"""
+@@ -66,17 +65,17 @@ class Args:
+     """the batch size of sample from the reply memory"""
+     start_e: float = 1
+     """the starting epsilon for exploration"""
+-    end_e: float = 0.05
++    end_e: float = 0.7
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.5
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+-    learning_starts: int = 10000
++    learning_starts: int = 1000
+     """timestep to start learning"""
+     train_frequency: int = 10
+     """the frequency of training"""
+-    data_path: str = 'nvda_stock_data.csv'
++    data_path: str = 'spy_stock_data.csv'
+     """the path to your stock data CSV"""
+-    window_size: int = 30
++    window_size: int = 50
+     """how many days of history the AI sees at once"""
+ 
+ 
+@@ -99,14 +98,14 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+             env = gym.make(
+                 env_id,
+                 df=df,
+-                windows=30,
++                windows=args.window_size,
+                 positions = [-1, 0, 1],
+                 trading_fees = 0.01/100,
+                 name=f'env_{idx}',
+                 )
+             
+         env.unwrapped.add_metric('position', lambda history: history['position', -1])
+-        env.unwrapped.add_metric('Portfolio Val', lambda history: history['portfolio_valuation', -1])
++        env.unwrapped.add_metric('portfolio_valuation', lambda history: history['portfolio_valuation', -1])
+         env = gym.wrappers.RecordEpisodeStatistics(env)
+         env.action_space.seed(seed)
+ 
+@@ -121,11 +120,15 @@ class QNetwork(nn.Module):
+         super().__init__()
+         self.network = nn.Sequential(
+             nn.Flatten(),
+-            nn.Linear(np.array(env.single_observation_space.shape).prod(), 120),
++            nn.Linear(np.array(env.single_observation_space.shape).prod(), 256),
++            nn.ReLU(),
++            nn.Linear(256, 256),
++            nn.ReLU(),
++            nn.Linear(256, 128),
+             nn.ReLU(),
+-            nn.Linear(120, 84),
++            nn.Linear(128, 64),
+             nn.ReLU(),
+-            nn.Linear(84, env.single_action_space.n),
++            nn.Linear(64, env.single_action_space.n),
+         )
+ 
+     def forward(self, x):
+@@ -139,6 +142,8 @@ def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
+ 
+ if __name__ == "__main__":
+     args = tyro.cli(Args)
++    #please just track my logs i beg of you
++    args.track = True
+     #add yfinance for more stock data
+     if not os.path.exists(args.data_path):
+         print(f'Download data for {args.data_path}...')
+@@ -152,7 +157,7 @@ if __name__ == "__main__":
+         print('downloaded as a csv completed.')
+ 
+     #match num_envs
+-    assert args.num_envs == 10, "vectorized envs are not supported at the moment"
++    assert args.num_envs == 1, "vectorized envs are not supported at the moment"
+ 
+     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+ 
+@@ -217,6 +222,22 @@ if __name__ == "__main__":
+         # TRY NOT TO MODIFY: execute the game and log data.
+         next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+ 
++        if global_step % 100 == 0 and 'portfolio_valuation' in infos:
++            portfolio_val = float(infos['portfolio_valuation'][0])
++            stock_price = float(infos['data_close'][0])
++
++            writer.add_scalar("performance/portfolio_val", portfolio_val, global_step)
++            writer.add_scalar("performance/stock_price", stock_price, global_step)
++            writer.add_scalar("charts/epsilon", epsilon, global_step)
++
++            if args.track:
++                wandb.log({
++                    "performance/portfolio_val": portfolio_val,
++                    "performance/stock_price": stock_price,
++                    "charts/epsilon": epsilon,
++                    "global_step": global_step
++                })
++
+         # TRY NOT TO MODIFY: record rewards for plotting purposes
+         if "final_info" in infos:
+             for info in infos["final_info"]:
+@@ -225,7 +246,7 @@ if __name__ == "__main__":
+                     writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                     writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+                     writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
+-                    writer.add_scalar('performance/market_return', info.get('market_return', 100))
++                    writer.add_scalar('performance/market_return', info.get('market_return', 100), global_step)
+                     if args.track:
+                         wandb.log ({
+                             'performance/portfolio_return': info['episode']['r'],
+@@ -244,22 +265,6 @@ if __name__ == "__main__":
+         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
+         obs = next_obs
+ 
+-        #recording data
+-        if "Portfolio Val" in infos and 'data_close' in infos:
+-            current_price = infos["data_close"][0]
+-            current_val = infos["Portfolio Val"][0]
+-
+-            writer.add_scalar("performance/stock_price", current_price, global_step)
+-            writer.add_scalar("performance/portfolio_val", current_val, global_step)
+-            
+-            if args.track:
+-                wandb.log({
+-                    "performance/stock_price": current_price,
+-                    "performance/portfolio_val": current_val,
+-                    "charts/epsilon": epsilon,
+-                    "global_step": global_step
+-                })
+-
+         # ALGO LOGIC: training.
+         if global_step > args.learning_starts:
+             if global_step % args.train_frequency == 0:
+@@ -275,32 +280,7 @@ if __name__ == "__main__":
+                     writer.add_scalar("losses/q_values", old_val.mean().item(), global_step)
+                     print("SPS:", int(global_step / (time.time() - start_time)))
+                     writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
+-                    # writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+-                    # writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+-                    # writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
+-                    # writer.add_scalar('performance/market_return', info.get('market_return', 100))
+-                    # if args.track:
+-                    #     wandb.log ({
+-                    #         'performance/portfolio_return': info['episode']['r'],
+-                    #         'performance/market_return': info.get('market_return', 100), # The baseline
+-                    #         'global_step': global_step,
+-                    #     })
+-
+-                    # if "Portfolio Val" in infos and 'data_close' in infos:
+-                    #     current_price = infos["data_close"][0]
+-                    #     current_val = infos["Portfolio Val"][0]
+-
+-                    #     writer.add_scalar("performance/stock_price", current_price, global_step)
+-                    #     writer.add_scalar("performance/portfolio_val", current_val, global_step)
+-                        
+-                    #     if args.track:
+-                    #         wandb.log({
+-                    #             "performance/stock_price": current_price,
+-                    #             "performance/portfolio_val": current_val,
+-                    #             "charts/epsilon": epsilon,
+-                    #             "global_step": global_step
+-                    #         })
+-
++                    
+                 # optimize the model
+                 optimizer.zero_grad()
+                 loss.backward()
+@@ -346,6 +326,5 @@ if __name__ == "__main__":
+     envs.close()
+     writer.close()
+     if args.track:
+-        import wandb
+         wandb.finish()
+ 
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index a268fd3..6f6e224 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug-internal.log
+\ No newline at end of file
++run-20260318_065515-pptnmmrd/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index b295559..44c7c63 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug.log
+\ No newline at end of file
++run-20260318_065515-pptnmmrd/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index d361ac1..0c68946 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h
+\ No newline at end of file
++run-20260318_065515-pptnmmrd
+\ No newline at end of file

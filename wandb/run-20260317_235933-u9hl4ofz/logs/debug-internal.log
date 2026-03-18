@@ -1,0 +1,37 @@
+{"time":"2026-03-17T23:59:34.005652Z","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-17T23:59:34.02387Z","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-17T23:59:34.383636Z","level":"INFO","msg":"stream: created new stream","id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:34.384099Z","level":"INFO","msg":"handler: started","stream_id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:34.384216Z","level":"INFO","msg":"stream: started","id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:34.384335Z","level":"INFO","msg":"writer: started","stream_id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:34.384565Z","level":"INFO","msg":"sender: started","stream_id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:37.203282Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1102}
+{"time":"2026-03-17T23:59:37.284831Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":228}
+{"time":"2026-03-17T23:59:37.628766Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1958}
+{"time":"2026-03-17T23:59:37.639213Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":23}
+{"time":"2026-03-17T23:59:37.661554Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2038}
+{"time":"2026-03-17T23:59:37.675652Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":19}
+{"time":"2026-03-17T23:59:37.689898Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2118}
+{"time":"2026-03-17T23:59:37.745155Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":174}
+{"time":"2026-03-17T23:59:37.971132Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2830}
+{"time":"2026-03-17T23:59:38.108026Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":439}
+{"time":"2026-03-17T23:59:38.484814Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4130}
+{"time":"2026-03-17T23:59:38.514319Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":59}
+{"time":"2026-03-17T23:59:38.589613Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4250}
+{"time":"2026-03-17T23:59:38.62247Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":111}
+{"time":"2026-03-17T23:59:38.841073Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4742}
+{"time":"2026-03-17T23:59:38.850787Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":14}
+{"time":"2026-03-17T23:59:39.568495Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6494}
+{"time":"2026-03-17T23:59:39.641081Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":479}
+{"time":"2026-03-17T23:59:39.876995Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7278}
+{"time":"2026-03-17T23:59:39.896311Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":94}
+{"time":"2026-03-17T23:59:39.914523Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7478}
+{"time":"2026-03-17T23:59:39.919833Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":12}
+{"time":"2026-03-17T23:59:39.920824Z","level":"INFO","msg":"stream: closing","id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:45.189078Z","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-03-17T23:59:45.189168Z","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1773791971\")","namespace":""}
+{"time":"2026-03-17T23:59:45.194007Z","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/TradingEnv__dqn__1__1773791971/events.out.tfevents.1773791975.MacBookPro.lan.48629.0","runPath":"runs/TradingEnv__dqn__1__1773791971/events.out.tfevents.1773791975.MacBookPro.lan.48629.0"}
+{"time":"2026-03-17T23:59:46.222643Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-17T23:59:47.156891Z","level":"INFO","msg":"handler: closed","stream_id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:47.158178Z","level":"INFO","msg":"sender: closed","stream_id":"u9hl4ofz"}
+{"time":"2026-03-17T23:59:47.158212Z","level":"INFO","msg":"stream: closed","id":"u9hl4ofz"}

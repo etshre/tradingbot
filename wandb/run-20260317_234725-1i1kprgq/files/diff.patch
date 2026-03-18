@@ -1,0 +1,125 @@
+diff --git a/dqn.py b/dqn.py
+index 78b881e..6cf5073 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -52,7 +52,7 @@ class Args:
+     """total timesteps of the experiments"""
+     learning_rate: float = 2.5e-4
+     """the learning rate of the optimizer"""
+-    num_envs: int = 10
++    num_envs: int = 1
+     """the number of parallel game environments"""
+     buffer_size: int = 10000
+     """the replay memory buffer size"""
+@@ -70,13 +70,13 @@ class Args:
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.5
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+-    learning_starts: int = 10000
++    learning_starts: int = 1000
+     """timestep to start learning"""
+     train_frequency: int = 10
+     """the frequency of training"""
+     data_path: str = 'nvda_stock_data.csv'
+     """the path to your stock data CSV"""
+-    window_size: int = 30
++    window_size: int = 50
+     """how many days of history the AI sees at once"""
+ 
+ 
+@@ -139,6 +139,8 @@ def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
+ 
+ if __name__ == "__main__":
+     args = tyro.cli(Args)
++    #please just track my logs i beg of you
++    args.track = True
+     #add yfinance for more stock data
+     if not os.path.exists(args.data_path):
+         print(f'Download data for {args.data_path}...')
+@@ -152,7 +154,7 @@ if __name__ == "__main__":
+         print('downloaded as a csv completed.')
+ 
+     #match num_envs
+-    assert args.num_envs == 10, "vectorized envs are not supported at the moment"
++    assert args.num_envs == 1, "vectorized envs are not supported at the moment"
+ 
+     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+ 
+@@ -244,22 +246,34 @@ if __name__ == "__main__":
+         # TRY NOT TO MODIFY: CRUCIAL step easy to overlook
+         obs = next_obs
+ 
+-        #recording data
+-        if "Portfolio Val" in infos and 'data_close' in infos:
+-            current_price = infos["data_close"][0]
+-            current_val = infos["Portfolio Val"][0]
+-
+-            writer.add_scalar("performance/stock_price", current_price, global_step)
+-            writer.add_scalar("performance/portfolio_val", current_val, global_step)
+-            
+-            if args.track:
+-                wandb.log({
+-                    "performance/stock_price": current_price,
+-                    "performance/portfolio_val": current_val,
+-                    "charts/epsilon": epsilon,
+-                    "global_step": global_step
+-                })
+-
++        # recording data
++        for i in range(args.num_envs):
++            env_info = {}
++            if isinstance(infos, dict):
++                # SyncVectorEnv stores per-env info in infos as arrays or under '_' masks
++                for key in ['Portfolio Val', 'data_close', 'position']:
++                    if key in infos:
++                        val = infos[key]
++                        if hasattr(val, '__len__'):
++                            env_info[key] = val[i]
++                        else:
++                            env_info[key] = val
++
++            if 'Portfolio Val' in env_info and 'data_close' in env_info:
++                current_price = env_info['data_close']
++                current_val = env_info['Portfolio Val']
++
++                writer.add_scalar("performance/stock_price", current_price, global_step)
++                writer.add_scalar("performance/portfolio_val", current_val, global_step)
++
++                if args.track:
++                    wandb.log({
++                        "performance/stock_price": current_price,
++                        "performance/portfolio_val": current_val,
++                        "charts/epsilon": epsilon,
++                        "global_step": global_step
++                    })
++                break  # log env_0 only to avoid noise
+         # ALGO LOGIC: training.
+         if global_step > args.learning_starts:
+             if global_step % args.train_frequency == 0:
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index a268fd3..76ea3b3 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug-internal.log
+\ No newline at end of file
++run-20260317_234725-1i1kprgq/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index b295559..51bfc3f 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h/logs/debug.log
+\ No newline at end of file
++run-20260317_234725-1i1kprgq/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index d361ac1..f20dc0d 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260315_102248-2el27t8h
+\ No newline at end of file
++run-20260317_234725-1i1kprgq
+\ No newline at end of file
