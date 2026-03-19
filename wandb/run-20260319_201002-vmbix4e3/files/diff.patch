@@ -1,0 +1,51 @@
+diff --git a/dqn.py b/dqn.py
+index 11a1434..49b4ba4 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -222,13 +222,18 @@ if __name__ == "__main__":
+         # TRY NOT TO MODIFY: execute the game and log data.
+         next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+ 
+-        if global_step % 100 == 0 and 'portfolio_valuation' in infos:
++        if global_step % 1000 == 0 and 'portfolio_valuation' in infos:
+             portfolio_val = float(infos['portfolio_valuation'][0])
+             stock_price = float(infos['data_close'][0])
++            pos = infos['position'][0]
+ 
+             writer.add_scalar("performance/portfolio_val", portfolio_val, global_step)
+             writer.add_scalar("performance/stock_price", stock_price, global_step)
+             writer.add_scalar("charts/epsilon", epsilon, global_step)
++            writer.add_scalar("performance/position", pos, global_step)
++            #testing
++            writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
++            writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+ 
+             if args.track:
+                 wandb.log({
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 6f6e224..1a25f21 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260318_065515-pptnmmrd/logs/debug-internal.log
+\ No newline at end of file
++run-20260319_201002-vmbix4e3/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 44c7c63..30a3b31 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260318_065515-pptnmmrd/logs/debug.log
+\ No newline at end of file
++run-20260319_201002-vmbix4e3/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 0c68946..f969001 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260318_065515-pptnmmrd
+\ No newline at end of file
++run-20260319_201002-vmbix4e3
+\ No newline at end of file

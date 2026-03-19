@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 235, in <module>
+    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                                                ^^^^
+NameError: name 'info' is not defined. Did you mean: 'infos'?

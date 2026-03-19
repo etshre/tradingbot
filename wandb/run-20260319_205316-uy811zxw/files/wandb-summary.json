@@ -1,0 +1,1 @@
+{"global_step":499900,"performance/portfolio_val":782.0065,"losses/q_values":0.21848054,"_wandb":{"runtime":411},"performance/stock_price":389.36053,"charts/epsilon":0.7,"_runtime":411,"performance/position":-1,"_step":17466,"charts/SPS":1218,"_timestamp":1.773954009919075e+09,"losses/td_loss":4.113651e-05}

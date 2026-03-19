@@ -226,11 +226,16 @@ if __name__ == "__main__":
             portfolio_val = float(infos['portfolio_valuation'][0])
             stock_price = float(infos['data_close'][0])
             pos = infos['position'][0]
+            ep_return = infos['episode']['r']
+            ep_len = infos['episode']['l']
 
             writer.add_scalar("performance/portfolio_val", portfolio_val, global_step)
             writer.add_scalar("performance/stock_price", stock_price, global_step)
             writer.add_scalar("charts/epsilon", epsilon, global_step)
             writer.add_scalar("performance/position", pos, global_step)
+            #testing
+            writer.add_scalar("charts/episodic_return", ep_return, global_step)
+            writer.add_scalar("charts/episodic_length", ep_len, global_step)
 
             if args.track:
                 wandb.log({
@@ -243,23 +248,17 @@ if __name__ == "__main__":
         # TRY NOT TO MODIFY: record rewards for plotting purposes
         if "final_info" in infos:
             for info in infos["final_info"]:
-                if info is not None and "episode" in info:
-                    ep_return = float(info["episode"]["r"])
-                    ep_length = int(info["episode"]["l"])
-                    
-                    print(f"global_step={global_step}, episodic_return={ep_return}")
-                    
-                    writer.add_scalar("charts/episodic_return", ep_return, global_step)
-                    writer.add_scalar("charts/episodic_length", ep_length, global_step)
-                    writer.add_scalar("performance/portfolio_return", ep_return, global_step)
-                    writer.add_scalar("performance/market_return", info.get("market_return", 100), global_step)
-
+                if info and "episode" in info:
+                    print(f"global_step={global_step}, episodic_return={info['episode']['r']}")
+                    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                    writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+                    writer.add_scalar('performance/portfolio_return', info['episode']['r'], global_step)
+                    writer.add_scalar('performance/market_return', info.get('market_return', 100), global_step)
                     if args.track:
-                        wandb.log({
-                            "charts/episodic_return": ep_return,
-                            "charts/episodic_length": ep_length,
-                            "performance/market_return": info.get("market_return", 100),
-                            "global_step": global_step
+                        wandb.log ({
+                            'performance/portfolio_return': info['episode']['r'],
+                            'performance/market_return': info.get('market_return', 100), # The baseline
+                            'global_step': global_step,
                         })
 
         # TRY NOT TO MODIFY: save data to reply buffer; handle `final_observation`

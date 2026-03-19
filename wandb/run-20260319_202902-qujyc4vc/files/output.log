@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/emerald/code/tradingbot/dqn.py", line 229, in <module>
+    ep_return = infos['episode']['r']
+                ~~~~~^^^^^^^^^^^
+KeyError: 'episode'
