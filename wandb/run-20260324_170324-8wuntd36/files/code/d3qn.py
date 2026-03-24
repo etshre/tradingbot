@@ -51,7 +51,7 @@ class Args:
     """total timesteps of the experiments"""
     learning_rate: float = 2.5e-4
     """the learning rate of the optimizer"""
-    num_envs: int = 10
+    num_envs: int = 1
     """the number of parallel game environments"""
     buffer_size: int = 1000
     """the replay memory buffer size"""
@@ -174,7 +174,7 @@ if __name__ == "__main__":
         print('downloaded as a csv completed.')
 
     #match num_envs
-    assert args.num_envs == 10, "vectorized envs are not supported at the moment"
+    assert args.num_envs == 1, "vectorized envs are not supported at the moment"
 
     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
 

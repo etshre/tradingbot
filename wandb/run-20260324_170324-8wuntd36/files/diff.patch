@@ -1,0 +1,68 @@
+diff --git a/d3qn.py b/d3qn.py
+index cba16e8..c93aafc 100644
+--- a/d3qn.py
++++ b/d3qn.py
+@@ -65,7 +65,7 @@ class Args:
+     """the batch size of sample from the reply memory"""
+     start_e: float = 1
+     """the starting epsilon for exploration"""
+-    end_e: float = 0.7
++    end_e: float = 0.2
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.5
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+@@ -115,8 +115,7 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+ 
+ 
+ # ALGO LOGIC: initialize agent here:
+-class QNetwork(nn.Module):
+-    class DuelingQNetwork(nn.Module):
++class DuelingQNetwork(nn.Module):
+     def __init__(self, env):
+         super().__init__()
+ 
+@@ -305,7 +304,7 @@ if __name__ == "__main__":
+                     target_q = next_q_target.gather(1, next_actions.unsqueeze(1)).squeeze()
+                 
+                     td_target = data.rewards.flatten() + args.gamma * target_q * (1 - data.dones.flatten())
+-                data.dones.flatten())
++                data.dones.flatten()
+                 old_val = q_network(data.observations).gather(1, data.actions).squeeze()
+                 loss = F.mse_loss(td_target, old_val)
+ 
+@@ -343,7 +342,7 @@ if __name__ == "__main__":
+                 args.env_id,
+                 eval_episodes=5,
+                 run_name=f"{run_name}-eval",
+-                Model=QNetwork,
++                Model= DuelingQNetwork,
+                 device=device,
+                 epsilon=0.05,
+             )
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 742dafa..cec08a3 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260320_181739-nqpdgbgx/logs/debug-internal.log
+\ No newline at end of file
++run-20260324_170324-8wuntd36/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index ee8d6dd..2d9e25b 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260320_181739-nqpdgbgx/logs/debug.log
+\ No newline at end of file
++run-20260324_170324-8wuntd36/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 43f00ad..68f2094 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260320_181739-nqpdgbgx
+\ No newline at end of file
++run-20260324_170324-8wuntd36
+\ No newline at end of file
