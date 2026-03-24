@@ -116,24 +116,42 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
 
 # ALGO LOGIC: initialize agent here:
 class QNetwork(nn.Module):
+    class DuelingQNetwork(nn.Module):
     def __init__(self, env):
         super().__init__()
-        self.network = nn.Sequential(
+
+        input_dim = np.array(env.single_observation_space.shape).prod()
+        action_dim = env.single_action_space.n
+
+        self.feature = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(np.array(env.single_observation_space.shape).prod(), 256),
+            nn.Linear(input_dim, 256),
             nn.ReLU(),
             nn.Linear(256, 256),
             nn.ReLU(),
+        )
+
+        # Value Stream
+        self.value_stream = nn.Sequential(
             nn.Linear(256, 128),
             nn.ReLU(),
-            nn.Linear(128, 64),
+            nn.Linear(128, 1)
+        )
+
+        # Advantage Stream
+        self.adv_stream = nn.Sequential(
+            nn.Linear(256, 128),
             nn.ReLU(),
-            nn.Linear(64, env.single_action_space.n),
+            nn.Linear(128, action_dim)
         )
 
     def forward(self, x):
-        return self.network(x)
+        x = self.feature(x)
+        value = self.value_stream(x)
+        adv = self.adv_stream(x)
 
+        # dueling output: Q = V + (A - mean(A))
+        return value + adv - adv.mean(dim=1, keepdim=True)
 
 def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
     slope = (end_e - start_e) / duration
@@ -193,11 +211,11 @@ if __name__ == "__main__":
     )
     assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
 
-    q_network = QNetwork(envs).to(device)
+    q_network = DuelingQNetwork(envs).to(device)
     optimizer = optim.Adam(q_network.parameters(), lr=args.learning_rate)
-    target_network = QNetwork(envs).to(device)
+    target_network = DuelingQNetwork(envs).to(device)
     target_network.load_state_dict(q_network.state_dict())
-
+    
     rb = ReplayBuffer(
         args.buffer_size,
         envs.single_observation_space,
@@ -278,8 +296,16 @@ if __name__ == "__main__":
             if global_step % args.train_frequency == 0:
                 data = rb.sample(args.batch_size)
                 with torch.no_grad():
-                    target_max, _ = target_network(data.next_observations).max(dim=1)
-                    td_target = data.rewards.flatten() + args.gamma * target_max * (1 - data.dones.flatten())
+                    # action selection from online network
+                    next_q_online = q_network(data.next_observations)
+                    next_actions = next_q_online.argmax(dim=1)
+                
+                    # action evaluation from target network
+                    next_q_target = target_network(data.next_observations)
+                    target_q = next_q_target.gather(1, next_actions.unsqueeze(1)).squeeze()
+                
+                    td_target = data.rewards.flatten() + args.gamma * target_q * (1 - data.dones.flatten())
+                data.dones.flatten())
                 old_val = q_network(data.observations).gather(1, data.actions).squeeze()
                 loss = F.mse_loss(td_target, old_val)
 
