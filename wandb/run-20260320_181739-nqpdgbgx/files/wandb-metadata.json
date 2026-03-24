@@ -1,0 +1,28 @@
+{
+  "os": "macOS-26.3.1-x86_64-i386-64bit",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-03-20T18:17:39.338828Z",
+  "program": "/Users/emerald/code/tradingbot/dqn.py",
+  "codePath": "dqn.py",
+  "codePathLocal": "dqn.py",
+  "git": {
+    "remote": "https://github.com/etshre/tradingbot.git",
+    "commit": "8f5e82b7a58a0a79229d0f6142a190a92c3314d1"
+  },
+  "email": "estherr.w54@gmail.com",
+  "root": "/Users/emerald/code/tradingbot",
+  "host": "MacBookPro.lan",
+  "executable": "/Users/emerald/code/tradingbot/.venv/bin/python",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "357000257536",
+      "used": "318607294464"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "writerId": "cvbr7q8f2uglj4gvvvdlevpy5ul221jb"
+}

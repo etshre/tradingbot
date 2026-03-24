@@ -1,0 +1,55 @@
+diff --git a/dqn.py b/dqn.py
+index c7c88e6..8b5885f 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -65,7 +65,7 @@ class Args:
+     """the batch size of sample from the reply memory"""
+     start_e: float = 1
+     """the starting epsilon for exploration"""
+-    end_e: float = 0.7
++    end_e: float = 0.1
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.5
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+@@ -92,7 +92,13 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
+ 
+ 
+         if capture_video and idx == 0:
+-            env = gym.make(env_id, render_mode="logs")
++            env = gym.make(env_id, 
++                df=df,
++                windows=30,
++                positions=[-1, 0, 1],
++                trading_fees=0.01/100,
++                name=f'env_{idx}',
++                render_mode="logs")
+             env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+         else:
+             env = gym.make(
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 6b4067a..742dafa 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw/logs/debug-internal.log
+\ No newline at end of file
++run-20260320_181739-nqpdgbgx/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 49c355f..ee8d6dd 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw/logs/debug.log
+\ No newline at end of file
++run-20260320_181739-nqpdgbgx/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 1be4260..43f00ad 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw
+\ No newline at end of file
++run-20260320_181739-nqpdgbgx
+\ No newline at end of file

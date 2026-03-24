@@ -1,0 +1,40 @@
+diff --git a/dqn.py b/dqn.py
+index c7c88e6..76eca4f 100644
+--- a/dqn.py
++++ b/dqn.py
+@@ -65,7 +65,7 @@ class Args:
+     """the batch size of sample from the reply memory"""
+     start_e: float = 1
+     """the starting epsilon for exploration"""
+-    end_e: float = 0.7
++    end_e: float = 0.1
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.5
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 6b4067a..d33362a 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw/logs/debug-internal.log
+\ No newline at end of file
++run-20260319_221929-uuhnz86g/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 49c355f..a4a39ab 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw/logs/debug.log
+\ No newline at end of file
++run-20260319_221929-uuhnz86g/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 1be4260..3a3f3a5 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260319_205316-uy811zxw
+\ No newline at end of file
++run-20260319_221929-uuhnz86g
+\ No newline at end of file

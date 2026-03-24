@@ -92,13 +92,7 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
 
 
         if capture_video and idx == 0:
-            env = gym.make(env_id, 
-                df=df,
-                windows=30,
-                positions=[-1, 0, 1],
-                trading_fees=0.01/100,
-                name=f'env_{idx}',
-                render_mode="logs")
+            env = gym.make(env_id, render_mode="logs")
             env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
         else:
             env = gym.make(
