@@ -1,0 +1,27 @@
+{"time":"2026-05-07T19:24:50.908782+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-05-07T19:24:50.939572+01:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-05-07T19:24:51.206774+01:00","level":"INFO","msg":"stream: created new stream","id":"v0e1heuv"}
+{"time":"2026-05-07T19:24:51.206884+01:00","level":"INFO","msg":"handler: started","stream_id":"v0e1heuv"}
+{"time":"2026-05-07T19:24:51.208049+01:00","level":"INFO","msg":"stream: started","id":"v0e1heuv"}
+{"time":"2026-05-07T19:24:51.208366+01:00","level":"INFO","msg":"writer: started","stream_id":"v0e1heuv"}
+{"time":"2026-05-07T19:24:51.20837+01:00","level":"INFO","msg":"sender: started","stream_id":"v0e1heuv"}
+{"time":"2026-05-07T19:25:02.223763+01:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-05-07T19:25:02.224001+01:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/TradingEnv__d3qn__1__1778178286\")","namespace":""}
+{"time":"2026-05-07T19:25:02.22476+01:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/TradingEnv__d3qn__1__1778178286/events.out.tfevents.1778178292.MacBookPro.lan.7725.0","runPath":"runs/TradingEnv__d3qn__1__1778178286/events.out.tfevents.1778178292.MacBookPro.lan.7725.0"}
+{"time":"2026-05-07T19:47:53.024358+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":39374}
+{"time":"2026-05-07T19:47:53.025628+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-07T20:10:16.654429+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/v0e1heuv/file_stream\": read tcp [2a00:23ee:2970:e74:acb4:a8b5:c269:f97b]:51541->[64:ff9b::2208:fa65]:443: read: no route to host"}
+{"time":"2026-05-07T20:13:04.247428+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":86973}
+{"time":"2026-05-07T20:13:04.247972+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-07T20:13:09.256268+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":87030}
+{"time":"2026-05-07T20:13:09.256532+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-07T20:39:15.053425+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":134395}
+{"time":"2026-05-07T20:39:15.053562+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-07T20:40:45.101642+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":137232}
+{"time":"2026-05-07T20:40:45.101838+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-07T21:17:16.181345+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-07T21:17:16.508563+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-05-07T21:17:16.544303+01:00","level":"INFO","msg":"stream: closing","id":"v0e1heuv"}
+{"time":"2026-05-07T21:17:16.544686+01:00","level":"INFO","msg":"handler: closed","stream_id":"v0e1heuv"}
+{"time":"2026-05-07T21:17:16.544985+01:00","level":"INFO","msg":"sender: closed","stream_id":"v0e1heuv"}
+{"time":"2026-05-07T21:17:16.545039+01:00","level":"INFO","msg":"stream: closed","id":"v0e1heuv"}
