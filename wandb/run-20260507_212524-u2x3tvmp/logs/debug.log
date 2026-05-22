@@ -18,3 +18,8 @@ config: {'exp_name': 'd3qn', 'seed': 1, 'torch_deterministic': True, 'cuda': Tru
 2026-05-07 21:25:26,797 INFO    MainThread:31389 [wandb_run.py:_redirect():2465] Redirects installed.
 2026-05-07 21:25:26,801 INFO    MainThread:31389 [wandb_init.py:init():1082] run started, returning control to user process
 2026-05-07 21:25:26,802 INFO    MainThread:31389 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/TradingEnv__d3qn__1__1778185519, True
+2026-05-08 16:52:59,094 INFO    MainThread:31389 [wandb_run.py:_finish():2291] finishing run etshre-tradingbot/trading/u2x3tvmp
+2026-05-08 16:52:59,098 INFO    MainThread:31389 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-05-08 16:52:59,099 INFO    MainThread:31389 [wandb_run.py:_restore():2472] restore
+2026-05-08 16:52:59,099 INFO    MainThread:31389 [wandb_run.py:_restore():2478] restore done
+2026-05-08 16:53:31,372 INFO    MainThread:31389 [wandb_run.py:_footer_sync_info():3868] logging synced files

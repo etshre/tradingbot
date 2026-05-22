@@ -1,0 +1,860 @@
+diff --git a/runs/TradingEnv__d3qn__1__1778185519/events.out.tfevents.1778185526.MacBookPro.lan.31389.0 b/runs/TradingEnv__d3qn__1__1778185519/events.out.tfevents.1778185526.MacBookPro.lan.31389.0
+index 908537e..66c2a45 100644
+Binary files a/runs/TradingEnv__d3qn__1__1778185519/events.out.tfevents.1778185526.MacBookPro.lan.31389.0 and b/runs/TradingEnv__d3qn__1__1778185519/events.out.tfevents.1778185526.MacBookPro.lan.31389.0 differ
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 14e4c79..5bda6b4 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260507_212524-u2x3tvmp/logs/debug-internal.log
+\ No newline at end of file
++run-20260508_205334-bcynuni4/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 64eb82c..8813f4a 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260507_212524-u2x3tvmp/logs/debug.log
+\ No newline at end of file
++run-20260508_205334-bcynuni4/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index f7cc038..2360adb 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260507_212524-u2x3tvmp
+\ No newline at end of file
++run-20260508_205334-bcynuni4
+\ No newline at end of file
+diff --git a/wandb/run-20260507_212524-u2x3tvmp/files/output.log b/wandb/run-20260507_212524-u2x3tvmp/files/output.log
+index 34aa41d..ad3b6c2 100644
+--- a/wandb/run-20260507_212524-u2x3tvmp/files/output.log
++++ b/wandb/run-20260507_212524-u2x3tvmp/files/output.log
+@@ -49304,3 +49304,791 @@ Market Return : 59.13%   |   Portfolio Return : 296.00%   |   position : 1   |
+ Market Return : 59.13%   |   Portfolio Return : 261.93%   |   position : 1   |   portfolio_valuation : 3619.3261633304646   |
+ Market Return : 59.13%   |   Portfolio Return : 94.34%   |   position : 1   |   portfolio_valuation : 1943.4215142348494   |
+ SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 130.69%   |   position : 1   |   portfolio_valuation : 2306.9311910094634   |
++Market Return : 59.13%   |   Portfolio Return : 217.87%   |   position : -1   |   portfolio_valuation : 3178.732982953942   |
++Market Return : 59.13%   |   Portfolio Return : 153.28%   |   position : 1   |   portfolio_valuation : 2532.7637369732756   |
++Market Return : 59.13%   |   Portfolio Return : 311.06%   |   position : 1   |   portfolio_valuation : 4110.625129150268   |
++Market Return : 59.13%   |   Portfolio Return : 116.21%   |   position : 1   |   portfolio_valuation : 2162.0639959956598   |
++Market Return : 59.13%   |   Portfolio Return : 180.99%   |   position : 1   |   portfolio_valuation : 2809.9282825766336   |
++Market Return : 59.13%   |   Portfolio Return : 35.89%   |   position : -1   |   portfolio_valuation : 1358.9266242532094   |
++Market Return : 59.13%   |   Portfolio Return : 105.12%   |   position : 0   |   portfolio_valuation : 2051.21613846955   |
++Market Return : 59.13%   |   Portfolio Return : 115.94%   |   position : 1   |   portfolio_valuation : 2159.440902221171   |
++Market Return : 59.13%   |   Portfolio Return : 59.99%   |   position : 0   |   portfolio_valuation : 1599.8609287819475   |
++Market Return : 59.13%   |   Portfolio Return : 83.81%   |   position : 1   |   portfolio_valuation : 1838.055202967855   |
++Market Return : 59.13%   |   Portfolio Return : 233.73%   |   position : -1   |   portfolio_valuation : 3337.2880360846616   |
++Market Return : 59.13%   |   Portfolio Return : 217.29%   |   position : 1   |   portfolio_valuation : 3172.85952075603   |
++Market Return : 59.13%   |   Portfolio Return : 175.55%   |   position : 1   |   portfolio_valuation : 2755.4825573188605   |
++Market Return : 59.13%   |   Portfolio Return : 77.38%   |   position : -1   |   portfolio_valuation : 1773.8159841439892   |
++Market Return : 59.13%   |   Portfolio Return : 76.74%   |   position : 1   |   portfolio_valuation : 1767.4026551980376   |
++Market Return : 59.13%   |   Portfolio Return : 310.78%   |   position : 1   |   portfolio_valuation : 4107.796409645345   |
++Market Return : 59.13%   |   Portfolio Return : 220.38%   |   position : 1   |   portfolio_valuation : 3203.782369981642   |
++Market Return : 59.13%   |   Portfolio Return : 210.62%   |   position : -1   |   portfolio_valuation : 3106.2104054611987   |
++Market Return : 59.13%   |   Portfolio Return : 328.71%   |   position : 1   |   portfolio_valuation : 4287.1089085314825   |
++Market Return : 59.13%   |   Portfolio Return : 89.56%   |   position : 1   |   portfolio_valuation : 1895.571974357715   |
++Market Return : 59.13%   |   Portfolio Return : 35.84%   |   position : -1   |   portfolio_valuation : 1358.3767868627906   |
++Market Return : 59.13%   |   Portfolio Return : 177.53%   |   position : 0   |   portfolio_valuation : 2775.27495775192   |
++Market Return : 59.13%   |   Portfolio Return : 258.86%   |   position : 1   |   portfolio_valuation : 3588.5955148861344   |
++Market Return : 59.13%   |   Portfolio Return : 216.79%   |   position : 0   |   portfolio_valuation : 3167.86479731043   |
++Market Return : 59.13%   |   Portfolio Return : 40.46%   |   position : 1   |   portfolio_valuation : 1404.5628879204896   |
++Market Return : 59.13%   |   Portfolio Return : 126.77%   |   position : 1   |   portfolio_valuation : 2267.7342322638515   |
++Market Return : 59.13%   |   Portfolio Return : 127.25%   |   position : 0   |   portfolio_valuation : 2272.511549175413   |
++Market Return : 59.13%   |   Portfolio Return : 184.46%   |   position : -1   |   portfolio_valuation : 2844.6478993274736   |
++Market Return : 59.13%   |   Portfolio Return : 237.89%   |   position : -1   |   portfolio_valuation : 3378.8722117374564   |
++Market Return : 59.13%   |   Portfolio Return : 236.41%   |   position : 1   |   portfolio_valuation : 3364.074831662506   |
++Market Return : 59.13%   |   Portfolio Return : 241.89%   |   position : 1   |   portfolio_valuation : 3418.9298935830893   |
++Market Return : 59.13%   |   Portfolio Return : 178.73%   |   position : 1   |   portfolio_valuation : 2787.337487424921   |
++Market Return : 59.13%   |   Portfolio Return : 229.20%   |   position : -1   |   portfolio_valuation : 3292.0430879127957   |
++Market Return : 59.13%   |   Portfolio Return : 52.72%   |   position : 1   |   portfolio_valuation : 1527.205385121472   |
++Market Return : 59.13%   |   Portfolio Return : 219.57%   |   position : 1   |   portfolio_valuation : 3195.6788835670386   |
++Market Return : 59.13%   |   Portfolio Return : 213.57%   |   position : 0   |   portfolio_valuation : 3135.7002933835474   |
++Market Return : 59.13%   |   Portfolio Return : 196.77%   |   position : 1   |   portfolio_valuation : 2967.650961754386   |
++Market Return : 59.13%   |   Portfolio Return : 124.48%   |   position : 1   |   portfolio_valuation : 2244.766981724081   |
++Market Return : 59.13%   |   Portfolio Return : 251.52%   |   position : 1   |   portfolio_valuation : 3515.204889179697   |
++Market Return : 59.13%   |   Portfolio Return : 47.24%   |   position : -1   |   portfolio_valuation : 1472.4410630977181   |
++Market Return : 59.13%   |   Portfolio Return : 193.21%   |   position : -1   |   portfolio_valuation : 2932.1177386421564   |
++Market Return : 59.13%   |   Portfolio Return : 173.79%   |   position : 0   |   portfolio_valuation : 2737.9453299200372   |
++Market Return : 59.13%   |   Portfolio Return : 377.96%   |   position : 1   |   portfolio_valuation : 4779.632155935457   |
++Market Return : 59.13%   |   Portfolio Return : 237.32%   |   position : -1   |   portfolio_valuation : 3373.169416256097   |
++Market Return : 59.13%   |   Portfolio Return : 391.23%   |   position : 1   |   portfolio_valuation : 4912.286854117084   |
++Market Return : 59.13%   |   Portfolio Return : 319.60%   |   position : 1   |   portfolio_valuation : 4196.027886622444   |
++Market Return : 59.13%   |   Portfolio Return : 208.15%   |   position : 0   |   portfolio_valuation : 3081.479905931253   |
++Market Return : 59.13%   |   Portfolio Return : 40.65%   |   position : 0   |   portfolio_valuation : 1406.5302477866471   |
++Market Return : 59.13%   |   Portfolio Return : 150.57%   |   position : 1   |   portfolio_valuation : 2505.720223355013   |
++Market Return : 59.13%   |   Portfolio Return : 94.63%   |   position : -1   |   portfolio_valuation : 1946.3024132038518   |
++Market Return : 59.13%   |   Portfolio Return : 219.14%   |   position : 1   |   portfolio_valuation : 3191.3964144237984   |
++Market Return : 59.13%   |   Portfolio Return : 162.21%   |   position : 1   |   portfolio_valuation : 2622.13316058295   |
++Market Return : 59.13%   |   Portfolio Return : 154.74%   |   position : 1   |   portfolio_valuation : 2547.369749523437   |
++Market Return : 59.13%   |   Portfolio Return : 360.60%   |   position : 0   |   portfolio_valuation : 4605.96138231375   |
++Market Return : 59.13%   |   Portfolio Return : 95.55%   |   position : 1   |   portfolio_valuation : 1955.5225650134396   |
++Market Return : 59.13%   |   Portfolio Return : 434.48%   |   position : 0   |   portfolio_valuation : 5344.762523120894   |
++Market Return : 59.13%   |   Portfolio Return : 113.36%   |   position : 1   |   portfolio_valuation : 2133.6017092377947   |
++Market Return : 59.13%   |   Portfolio Return : 190.14%   |   position : 1   |   portfolio_valuation : 2901.362065193837   |
++Market Return : 59.13%   |   Portfolio Return : 253.08%   |   position : -1   |   portfolio_valuation : 3530.784419875437   |
++Market Return : 59.13%   |   Portfolio Return : 191.91%   |   position : 1   |   portfolio_valuation : 2919.1220057355035   |
++Market Return : 59.13%   |   Portfolio Return : 208.19%   |   position : 1   |   portfolio_valuation : 3081.8768293047146   |
++Market Return : 59.13%   |   Portfolio Return : 172.62%   |   position : 0   |   portfolio_valuation : 2726.1613657616817   |
++Market Return : 59.13%   |   Portfolio Return : 213.47%   |   position : 1   |   portfolio_valuation : 3134.6610604876055   |
++Market Return : 59.13%   |   Portfolio Return : 68.66%   |   position : 1   |   portfolio_valuation : 1686.5573532573349   |
++Market Return : 59.13%   |   Portfolio Return : 137.85%   |   position : 1   |   portfolio_valuation : 2378.508551667689   |
++Market Return : 59.13%   |   Portfolio Return : 212.00%   |   position : 1   |   portfolio_valuation : 3119.9823436159863   |
++Market Return : 59.13%   |   Portfolio Return : 251.26%   |   position : -1   |   portfolio_valuation : 3512.6002882631715   |
++Market Return : 59.13%   |   Portfolio Return : 260.50%   |   position : 0   |   portfolio_valuation : 3605.0332098228746   |
++Market Return : 59.13%   |   Portfolio Return : 311.41%   |   position : 0   |   portfolio_valuation : 4114.133393799613   |
++Market Return : 59.13%   |   Portfolio Return : 185.14%   |   position : -1   |   portfolio_valuation : 2851.361811131488   |
++Market Return : 59.13%   |   Portfolio Return : 133.28%   |   position : -1   |   portfolio_valuation : 2332.7904064574964   |
++Market Return : 59.13%   |   Portfolio Return : 127.17%   |   position : 1   |   portfolio_valuation : 2271.7125892160043   |
++Market Return : 59.13%   |   Portfolio Return : 131.29%   |   position : 1   |   portfolio_valuation : 2312.8533433392327   |
++Market Return : 59.13%   |   Portfolio Return : 369.12%   |   position : 0   |   portfolio_valuation : 4691.1958648392365   |
++Market Return : 59.13%   |   Portfolio Return : 213.70%   |   position : 1   |   portfolio_valuation : 3137.0469150438607   |
++Market Return : 59.13%   |   Portfolio Return : 208.19%   |   position : 0   |   portfolio_valuation : 3081.9488288888792   |
++Market Return : 59.13%   |   Portfolio Return : 81.76%   |   position : -1   |   portfolio_valuation : 1817.5886403655838   |
++Market Return : 59.13%   |   Portfolio Return : 119.07%   |   position : 1   |   portfolio_valuation : 2190.716560587092   |
++Market Return : 59.13%   |   Portfolio Return : 245.85%   |   position : 0   |   portfolio_valuation : 3458.5354774329603   |
++Market Return : 59.13%   |   Portfolio Return : 272.26%   |   position : 0   |   portfolio_valuation : 3722.6288075995035   |
++Market Return : 59.13%   |   Portfolio Return : 153.25%   |   position : 1   |   portfolio_valuation : 2532.524347242639   |
++Market Return : 59.13%   |   Portfolio Return : 73.01%   |   position : 1   |   portfolio_valuation : 1730.1010788323472   |
++Market Return : 59.13%   |   Portfolio Return : 276.64%   |   position : 1   |   portfolio_valuation : 3766.36459679034   |
++Market Return : 59.13%   |   Portfolio Return : 401.86%   |   position : 1   |   portfolio_valuation : 5018.596873661169   |
++Market Return : 59.13%   |   Portfolio Return : 30.32%   |   position : 1   |   portfolio_valuation : 1303.1694416271578   |
++Market Return : 59.13%   |   Portfolio Return : 138.22%   |   position : 1   |   portfolio_valuation : 2382.17826722942   |
++Market Return : 59.13%   |   Portfolio Return : 153.29%   |   position : -1   |   portfolio_valuation : 2532.9038089376704   |
++Market Return : 59.13%   |   Portfolio Return : 190.89%   |   position : 0   |   portfolio_valuation : 2908.8978896190483   |
++Market Return : 59.13%   |   Portfolio Return : 91.87%   |   position : -1   |   portfolio_valuation : 1918.6851840892004   |
++Market Return : 59.13%   |   Portfolio Return : 230.20%   |   position : 1   |   portfolio_valuation : 3301.9952212632393   |
++Market Return : 59.13%   |   Portfolio Return : 301.71%   |   position : 1   |   portfolio_valuation : 4017.1048591007925   |
++Market Return : 59.13%   |   Portfolio Return : 198.40%   |   position : 1   |   portfolio_valuation : 2984.0197542651613   |
++Market Return : 59.13%   |   Portfolio Return : 287.37%   |   position : 0   |   portfolio_valuation : 3873.6983641361535   |
++Market Return : 59.13%   |   Portfolio Return : 218.24%   |   position : 1   |   portfolio_valuation : 3182.372388814879   |
++Market Return : 59.13%   |   Portfolio Return : 131.79%   |   position : 0   |   portfolio_valuation : 2317.8632618188126   |
++Market Return : 59.13%   |   Portfolio Return : 261.71%   |   position : -1   |   portfolio_valuation : 3617.142279534015   |
++Market Return : 59.13%   |   Portfolio Return : 137.33%   |   position : 1   |   portfolio_valuation : 2373.2901418797487   |
++Market Return : 59.13%   |   Portfolio Return : 15.62%   |   position : 1   |   portfolio_valuation : 1156.2025932260203   |
++Market Return : 59.13%   |   Portfolio Return : 342.52%   |   position : 1   |   portfolio_valuation : 4425.233229967557   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 238.58%   |   position : 1   |   portfolio_valuation : 3385.8114665747817   |
++Market Return : 59.13%   |   Portfolio Return : 243.73%   |   position : 1   |   portfolio_valuation : 3437.3100143203187   |
++Market Return : 59.13%   |   Portfolio Return : 590.73%   |   position : 1   |   portfolio_valuation : 6907.253968968922   |
++Market Return : 59.13%   |   Portfolio Return : 215.18%   |   position : 1   |   portfolio_valuation : 3151.776566702394   |
++Market Return : 59.13%   |   Portfolio Return : 299.87%   |   position : 1   |   portfolio_valuation : 3998.695392228306   |
++Market Return : 59.13%   |   Portfolio Return : 541.51%   |   position : 1   |   portfolio_valuation : 6415.098411454989   |
++Market Return : 59.13%   |   Portfolio Return : 324.22%   |   position : 1   |   portfolio_valuation : 4242.219344427814   |
++Market Return : 59.13%   |   Portfolio Return : 139.96%   |   position : 0   |   portfolio_valuation : 2399.5943660560924   |
++Market Return : 59.13%   |   Portfolio Return : 202.44%   |   position : -1   |   portfolio_valuation : 3024.3504857384087   |
++Market Return : 59.13%   |   Portfolio Return : 836.06%   |   position : 1   |   portfolio_valuation : 9360.564017029634   |
++Market Return : 59.13%   |   Portfolio Return : 210.66%   |   position : 1   |   portfolio_valuation : 3106.605343030255   |
++Market Return : 59.13%   |   Portfolio Return : 196.39%   |   position : 1   |   portfolio_valuation : 2963.876385282068   |
++Market Return : 59.13%   |   Portfolio Return : 250.24%   |   position : 1   |   portfolio_valuation : 3502.376074069538   |
++Market Return : 59.13%   |   Portfolio Return : 198.90%   |   position : 1   |   portfolio_valuation : 2989.0176209812516   |
++Market Return : 59.13%   |   Portfolio Return : 139.67%   |   position : -1   |   portfolio_valuation : 2396.7401367384905   |
++Market Return : 59.13%   |   Portfolio Return : 374.47%   |   position : 1   |   portfolio_valuation : 4744.697935173364   |
++Market Return : 59.13%   |   Portfolio Return : 149.50%   |   position : 0   |   portfolio_valuation : 2494.9771384211326   |
++Market Return : 59.13%   |   Portfolio Return : 108.04%   |   position : 1   |   portfolio_valuation : 2080.3820314738186   |
++Market Return : 59.13%   |   Portfolio Return : 126.96%   |   position : 1   |   portfolio_valuation : 2269.645180826901   |
++Market Return : 59.13%   |   Portfolio Return : 440.27%   |   position : 1   |   portfolio_valuation : 5402.713884341416   |
++Market Return : 59.13%   |   Portfolio Return : 289.72%   |   position : -1   |   portfolio_valuation : 3897.2328209235775   |
++Market Return : 59.13%   |   Portfolio Return : 230.62%   |   position : -1   |   portfolio_valuation : 3306.2057357058097   |
++Market Return : 59.13%   |   Portfolio Return : 261.07%   |   position : 1   |   portfolio_valuation : 3610.69356575176   |
++Market Return : 59.13%   |   Portfolio Return : 231.71%   |   position : -1   |   portfolio_valuation : 3317.1158196317406   |
++Market Return : 59.13%   |   Portfolio Return : 309.61%   |   position : 1   |   portfolio_valuation : 4096.111743211148   |
++Market Return : 59.13%   |   Portfolio Return : 283.07%   |   position : -1   |   portfolio_valuation : 3830.7025282913787   |
++Market Return : 59.13%   |   Portfolio Return : 266.15%   |   position : 1   |   portfolio_valuation : 3661.512320583384   |
++Market Return : 59.13%   |   Portfolio Return : 172.17%   |   position : 1   |   portfolio_valuation : 2721.653682353224   |
++Market Return : 59.13%   |   Portfolio Return : 347.00%   |   position : 1   |   portfolio_valuation : 4469.987464538501   |
++Market Return : 59.13%   |   Portfolio Return : 301.17%   |   position : 1   |   portfolio_valuation : 4011.6880430816013   |
++Market Return : 59.13%   |   Portfolio Return : 319.82%   |   position : 1   |   portfolio_valuation : 4198.158654384693   |
++Market Return : 59.13%   |   Portfolio Return : 92.47%   |   position : 0   |   portfolio_valuation : 1924.735216912969   |
++Market Return : 59.13%   |   Portfolio Return : 119.53%   |   position : 1   |   portfolio_valuation : 2195.301188930497   |
++Market Return : 59.13%   |   Portfolio Return : 389.01%   |   position : -1   |   portfolio_valuation : 4890.087462621091   |
++Market Return : 59.13%   |   Portfolio Return : 473.36%   |   position : 1   |   portfolio_valuation : 5733.640805431983   |
++Market Return : 59.13%   |   Portfolio Return : 47.28%   |   position : 1   |   portfolio_valuation : 1472.7876858562158   |
++Market Return : 59.13%   |   Portfolio Return : 256.22%   |   position : 1   |   portfolio_valuation : 3562.2186754273935   |
++Market Return : 59.13%   |   Portfolio Return : 94.37%   |   position : 1   |   portfolio_valuation : 1943.7270615395587   |
++Market Return : 59.13%   |   Portfolio Return : 140.41%   |   position : 1   |   portfolio_valuation : 2404.1157280505818   |
++Market Return : 59.13%   |   Portfolio Return : 235.31%   |   position : 1   |   portfolio_valuation : 3353.101369037697   |
++Market Return : 59.13%   |   Portfolio Return : 47.07%   |   position : -1   |   portfolio_valuation : 1470.6816388479365   |
++Market Return : 59.13%   |   Portfolio Return : 337.34%   |   position : 1   |   portfolio_valuation : 4373.435730977028   |
++Market Return : 59.13%   |   Portfolio Return : 198.02%   |   position : -1   |   portfolio_valuation : 2980.2491813877473   |
++Market Return : 59.13%   |   Portfolio Return : 121.06%   |   position : 1   |   portfolio_valuation : 2210.633254615101   |
++Market Return : 59.13%   |   Portfolio Return : 444.97%   |   position : -1   |   portfolio_valuation : 5449.6715912256095   |
++Market Return : 59.13%   |   Portfolio Return : 117.11%   |   position : 1   |   portfolio_valuation : 2171.077093345217   |
++Market Return : 59.13%   |   Portfolio Return : 487.12%   |   position : -1   |   portfolio_valuation : 5871.198791610343   |
++Market Return : 59.13%   |   Portfolio Return : 150.81%   |   position : 1   |   portfolio_valuation : 2508.0549667829546   |
++Market Return : 59.13%   |   Portfolio Return : 314.90%   |   position : 1   |   portfolio_valuation : 4149.006853102248   |
++Market Return : 59.13%   |   Portfolio Return : 117.40%   |   position : 1   |   portfolio_valuation : 2174.016944423519   |
++Market Return : 59.13%   |   Portfolio Return : 356.30%   |   position : 1   |   portfolio_valuation : 4563.04523951734   |
++Market Return : 59.13%   |   Portfolio Return : 170.58%   |   position : 1   |   portfolio_valuation : 2705.7873548444672   |
++Market Return : 59.13%   |   Portfolio Return : 503.68%   |   position : -1   |   portfolio_valuation : 6036.839180896083   |
++Market Return : 59.13%   |   Portfolio Return : 301.46%   |   position : -1   |   portfolio_valuation : 4014.631225986833   |
++Market Return : 59.13%   |   Portfolio Return : 53.37%   |   position : 0   |   portfolio_valuation : 1533.704113305121   |
++Market Return : 59.13%   |   Portfolio Return : 154.63%   |   position : 1   |   portfolio_valuation : 2546.3045339679   |
++Market Return : 59.13%   |   Portfolio Return : 147.32%   |   position : 1   |   portfolio_valuation : 2473.1582302398465   |
++Market Return : 59.13%   |   Portfolio Return : 121.13%   |   position : -1   |   portfolio_valuation : 2211.2597628757303   |
++Market Return : 59.13%   |   Portfolio Return : 188.59%   |   position : 1   |   portfolio_valuation : 2885.9004256821577   |
++Market Return : 59.13%   |   Portfolio Return : 180.00%   |   position : 1   |   portfolio_valuation : 2799.9964335728396   |
++Market Return : 59.13%   |   Portfolio Return : 372.24%   |   position : 1   |   portfolio_valuation : 4722.376176249571   |
++Market Return : 59.13%   |   Portfolio Return : 167.75%   |   position : 1   |   portfolio_valuation : 2677.514551920555   |
++Market Return : 59.13%   |   Portfolio Return : 310.03%   |   position : -1   |   portfolio_valuation : 4100.343120776206   |
++Market Return : 59.13%   |   Portfolio Return : 541.72%   |   position : 1   |   portfolio_valuation : 6417.208077683806   |
++Market Return : 59.13%   |   Portfolio Return : 229.87%   |   position : 0   |   portfolio_valuation : 3298.714779061406   |
++Market Return : 59.13%   |   Portfolio Return : 274.29%   |   position : 1   |   portfolio_valuation : 3742.891365246042   |
++Market Return : 59.13%   |   Portfolio Return : 82.43%   |   position : -1   |   portfolio_valuation : 1824.264825201094   |
++Market Return : 59.13%   |   Portfolio Return : 187.83%   |   position : 1   |   portfolio_valuation : 2878.278813585336   |
++Market Return : 59.13%   |   Portfolio Return : 104.35%   |   position : 1   |   portfolio_valuation : 2043.5422496384476   |
++Market Return : 59.13%   |   Portfolio Return : 35.11%   |   position : 1   |   portfolio_valuation : 1351.0633806996207   |
++Market Return : 59.13%   |   Portfolio Return : 60.95%   |   position : 1   |   portfolio_valuation : 1609.474183249334   |
++Market Return : 59.13%   |   Portfolio Return : 441.12%   |   position : 1   |   portfolio_valuation : 5411.229528322775   |
++Market Return : 59.13%   |   Portfolio Return : 148.04%   |   position : 1   |   portfolio_valuation : 2480.4138664469438   |
++Market Return : 59.13%   |   Portfolio Return : 226.17%   |   position : 1   |   portfolio_valuation : 3261.7009733978734   |
++Market Return : 59.13%   |   Portfolio Return : 91.28%   |   position : 1   |   portfolio_valuation : 1912.81028230886   |
++Market Return : 59.13%   |   Portfolio Return : 290.63%   |   position : 1   |   portfolio_valuation : 3906.322467264083   |
++Market Return : 59.13%   |   Portfolio Return : 285.10%   |   position : 1   |   portfolio_valuation : 3851.046823710165   |
++Market Return : 59.13%   |   Portfolio Return : 233.97%   |   position : -1   |   portfolio_valuation : 3339.6789789297904   |
++Market Return : 59.13%   |   Portfolio Return : 210.64%   |   position : 1   |   portfolio_valuation : 3106.423255650474   |
++Market Return : 59.13%   |   Portfolio Return : 304.31%   |   position : 1   |   portfolio_valuation : 4043.093533782781   |
++Market Return : 59.13%   |   Portfolio Return : 177.78%   |   position : -1   |   portfolio_valuation : 2777.8263646422374   |
++Market Return : 59.13%   |   Portfolio Return : 219.67%   |   position : -1   |   portfolio_valuation : 3196.7066052405116   |
++Market Return : 59.13%   |   Portfolio Return : 65.06%   |   position : 1   |   portfolio_valuation : 1650.5567117788428   |
++Market Return : 59.13%   |   Portfolio Return : 203.65%   |   position : 1   |   portfolio_valuation : 3036.4502636544726   |
++Market Return : 59.13%   |   Portfolio Return : 444.18%   |   position : 1   |   portfolio_valuation : 5441.79389032654   |
++Market Return : 59.13%   |   Portfolio Return : 831.37%   |   position : -1   |   portfolio_valuation : 9313.697546731411   |
++Market Return : 59.13%   |   Portfolio Return : 145.83%   |   position : 1   |   portfolio_valuation : 2458.344511725146   |
++Market Return : 59.13%   |   Portfolio Return : 147.25%   |   position : 1   |   portfolio_valuation : 2472.4574999810075   |
++Market Return : 59.13%   |   Portfolio Return : 238.23%   |   position : 1   |   portfolio_valuation : 3382.3465138905294   |
++Market Return : 59.13%   |   Portfolio Return : 163.05%   |   position : 1   |   portfolio_valuation : 2630.503333719918   |
++Market Return : 59.13%   |   Portfolio Return : 167.82%   |   position : 1   |   portfolio_valuation : 2678.1991568183876   |
++Market Return : 59.13%   |   Portfolio Return : 394.10%   |   position : 1   |   portfolio_valuation : 4941.036044659221   |
++Market Return : 59.13%   |   Portfolio Return : 753.55%   |   position : -1   |   portfolio_valuation : 8535.519049485829   |
++Market Return : 59.13%   |   Portfolio Return : 164.60%   |   position : -1   |   portfolio_valuation : 2646.042019709866   |
++Market Return : 59.13%   |   Portfolio Return : 346.96%   |   position : 1   |   portfolio_valuation : 4469.599608933252   |
++Market Return : 59.13%   |   Portfolio Return : 156.10%   |   position : -1   |   portfolio_valuation : 2560.955578944412   |
++Market Return : 59.13%   |   Portfolio Return : 129.06%   |   position : 1   |   portfolio_valuation : 2290.5748384475924   |
++Market Return : 59.13%   |   Portfolio Return : 123.84%   |   position : 1   |   portfolio_valuation : 2238.40574501307   |
++Market Return : 59.13%   |   Portfolio Return : 131.19%   |   position : -1   |   portfolio_valuation : 2311.9107132218633   |
++Market Return : 59.13%   |   Portfolio Return : 314.81%   |   position : -1   |   portfolio_valuation : 4148.060472716061   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 37.62%   |   position : -1   |   portfolio_valuation : 1376.179971411992   |
++Market Return : 59.13%   |   Portfolio Return : 15.87%   |   position : -1   |   portfolio_valuation : 1158.6784569781007   |
++Market Return : 59.13%   |   Portfolio Return : 174.68%   |   position : 0   |   portfolio_valuation : 2746.7889621491963   |
++Market Return : 59.13%   |   Portfolio Return : 68.83%   |   position : -1   |   portfolio_valuation : 1688.29990224832   |
++Market Return : 59.13%   |   Portfolio Return : 162.93%   |   position : 1   |   portfolio_valuation : 2629.320224493227   |
++Market Return : 59.13%   |   Portfolio Return : 181.41%   |   position : 1   |   portfolio_valuation : 2814.0544537426435   |
++Market Return : 59.13%   |   Portfolio Return : 199.92%   |   position : 1   |   portfolio_valuation : 2999.1903857030093   |
++Market Return : 59.13%   |   Portfolio Return : 341.05%   |   position : 1   |   portfolio_valuation : 4410.473830557348   |
++Market Return : 59.13%   |   Portfolio Return : 77.90%   |   position : -1   |   portfolio_valuation : 1779.040895230055   |
++Market Return : 59.13%   |   Portfolio Return : 349.99%   |   position : 1   |   portfolio_valuation : 4499.939980037306   |
++Market Return : 59.13%   |   Portfolio Return : 191.55%   |   position : 0   |   portfolio_valuation : 2915.495713679242   |
++Market Return : 59.13%   |   Portfolio Return : 108.39%   |   position : 1   |   portfolio_valuation : 2083.890184077243   |
++Market Return : 59.13%   |   Portfolio Return : 37.64%   |   position : 0   |   portfolio_valuation : 1376.4232554333173   |
++Market Return : 59.13%   |   Portfolio Return : 52.23%   |   position : 1   |   portfolio_valuation : 1522.3180742238708   |
++Market Return : 59.13%   |   Portfolio Return : 54.27%   |   position : -1   |   portfolio_valuation : 1542.697411516357   |
++Market Return : 59.13%   |   Portfolio Return : 156.40%   |   position : -1   |   portfolio_valuation : 2563.988849801036   |
++Market Return : 59.13%   |   Portfolio Return : 315.60%   |   position : 1   |   portfolio_valuation : 4155.985839604299   |
++Market Return : 59.13%   |   Portfolio Return : 22.97%   |   position : 1   |   portfolio_valuation : 1229.7276468754626   |
++Market Return : 59.13%   |   Portfolio Return : 55.54%   |   position : 0   |   portfolio_valuation : 1555.4087465791015   |
++Market Return : 59.13%   |   Portfolio Return : 76.18%   |   position : -1   |   portfolio_valuation : 1761.8291574317957   |
++Market Return : 59.13%   |   Portfolio Return : 106.03%   |   position : 1   |   portfolio_valuation : 2060.25194056567   |
++Market Return : 59.13%   |   Portfolio Return : 24.76%   |   position : 1   |   portfolio_valuation : 1247.5948313020226   |
++Market Return : 59.13%   |   Portfolio Return : 72.05%   |   position : 1   |   portfolio_valuation : 1720.5395285604554   |
++Market Return : 59.13%   |   Portfolio Return : 106.44%   |   position : -1   |   portfolio_valuation : 2064.4310751974153   |
++Market Return : 59.13%   |   Portfolio Return : 206.08%   |   position : 0   |   portfolio_valuation : 3060.7855071449953   |
++Market Return : 59.13%   |   Portfolio Return : 66.79%   |   position : 1   |   portfolio_valuation : 1667.914333118861   |
++Market Return : 59.13%   |   Portfolio Return : 165.98%   |   position : 1   |   portfolio_valuation : 2659.8098850991546   |
++Market Return : 59.13%   |   Portfolio Return : 37.23%   |   position : -1   |   portfolio_valuation : 1372.3202483751459   |
++Market Return : 59.13%   |   Portfolio Return : 140.18%   |   position : -1   |   portfolio_valuation : 2401.8097857226453   |
++Market Return : 59.13%   |   Portfolio Return : 178.61%   |   position : 0   |   portfolio_valuation : 2786.0552957466357   |
++Market Return : 59.13%   |   Portfolio Return : 181.26%   |   position : 0   |   portfolio_valuation : 2812.5866799336477   |
++Market Return : 59.13%   |   Portfolio Return : 26.36%   |   position : 1   |   portfolio_valuation : 1263.5984562380065   |
++Market Return : 59.13%   |   Portfolio Return : 127.16%   |   position : 0   |   portfolio_valuation : 2271.6187185638787   |
++Market Return : 59.13%   |   Portfolio Return : 31.32%   |   position : 1   |   portfolio_valuation : 1313.1820162087438   |
++Market Return : 59.13%   |   Portfolio Return : 121.69%   |   position : 1   |   portfolio_valuation : 2216.8546887533876   |
++Market Return : 59.13%   |   Portfolio Return : 38.41%   |   position : -1   |   portfolio_valuation : 1384.1392497692177   |
++Market Return : 59.13%   |   Portfolio Return : 221.72%   |   position : 0   |   portfolio_valuation : 3217.199157475066   |
++Market Return : 59.13%   |   Portfolio Return : 119.75%   |   position : 0   |   portfolio_valuation : 2197.4531061350913   |
++Market Return : 59.13%   |   Portfolio Return : 277.05%   |   position : -1   |   portfolio_valuation : 3770.5176565624242   |
++Market Return : 59.13%   |   Portfolio Return : 194.80%   |   position : 1   |   portfolio_valuation : 2947.970173873211   |
++Market Return : 59.13%   |   Portfolio Return : 264.75%   |   position : -1   |   portfolio_valuation : 3647.5490173496473   |
++Market Return : 59.13%   |   Portfolio Return : 217.78%   |   position : -1   |   portfolio_valuation : 3177.8020141007687   |
++Market Return : 59.13%   |   Portfolio Return : 191.82%   |   position : -1   |   portfolio_valuation : 2918.1911130259823   |
++Market Return : 59.13%   |   Portfolio Return : 149.70%   |   position : -1   |   portfolio_valuation : 2497.034895885636   |
++Market Return : 59.13%   |   Portfolio Return : 62.29%   |   position : 1   |   portfolio_valuation : 1622.929641087192   |
++Market Return : 59.13%   |   Portfolio Return : 182.33%   |   position : -1   |   portfolio_valuation : 2823.32333059285   |
++Market Return : 59.13%   |   Portfolio Return : 191.96%   |   position : -1   |   portfolio_valuation : 2919.618249324802   |
++Market Return : 59.13%   |   Portfolio Return : 91.87%   |   position : -1   |   portfolio_valuation : 1918.6941295546344   |
++Market Return : 59.13%   |   Portfolio Return : 149.03%   |   position : 1   |   portfolio_valuation : 2490.256933118853   |
++Market Return : 59.13%   |   Portfolio Return : 202.82%   |   position : 0   |   portfolio_valuation : 3028.2375853004028   |
++Market Return : 59.13%   |   Portfolio Return : 50.11%   |   position : -1   |   portfolio_valuation : 1501.1035337559126   |
++Market Return : 59.13%   |   Portfolio Return : 271.96%   |   position : 1   |   portfolio_valuation : 3719.600621837809   |
++Market Return : 59.13%   |   Portfolio Return : 178.44%   |   position : 1   |   portfolio_valuation : 2784.4244116140108   |
++Market Return : 59.13%   |   Portfolio Return : 98.92%   |   position : 0   |   portfolio_valuation : 1989.1847420629356   |
++Market Return : 59.13%   |   Portfolio Return : 212.13%   |   position : -1   |   portfolio_valuation : 3121.3174826472987   |
++Market Return : 59.13%   |   Portfolio Return : 194.51%   |   position : -1   |   portfolio_valuation : 2945.0925172256466   |
++Market Return : 59.13%   |   Portfolio Return : 35.28%   |   position : 0   |   portfolio_valuation : 1352.8075924745747   |
++Market Return : 59.13%   |   Portfolio Return : 154.96%   |   position : 1   |   portfolio_valuation : 2549.588935097371   |
++Market Return : 59.13%   |   Portfolio Return : 71.26%   |   position : 0   |   portfolio_valuation : 1712.6126197597337   |
++Market Return : 59.13%   |   Portfolio Return : 73.96%   |   position : -1   |   portfolio_valuation : 1739.6009108001228   |
++Market Return : 59.13%   |   Portfolio Return : 85.13%   |   position : -1   |   portfolio_valuation : 1851.3056697089714   |
++Market Return : 59.13%   |   Portfolio Return : 205.98%   |   position : 1   |   portfolio_valuation : 3059.8304646576044   |
++Market Return : 59.13%   |   Portfolio Return : 24.72%   |   position : -1   |   portfolio_valuation : 1247.1640416447142   |
++Market Return : 59.13%   |   Portfolio Return : 86.26%   |   position : 0   |   portfolio_valuation : 1862.595467064215   |
++Market Return : 59.13%   |   Portfolio Return : 205.78%   |   position : 0   |   portfolio_valuation : 3057.8329115607994   |
++Market Return : 59.13%   |   Portfolio Return : 71.54%   |   position : 1   |   portfolio_valuation : 1715.4101394154627   |
++Market Return : 59.13%   |   Portfolio Return : 117.24%   |   position : 0   |   portfolio_valuation : 2172.4214746458365   |
++Market Return : 59.13%   |   Portfolio Return : 77.38%   |   position : 0   |   portfolio_valuation : 1773.7742035835074   |
++Market Return : 59.13%   |   Portfolio Return : 99.12%   |   position : -1   |   portfolio_valuation : 1991.1647370476262   |
++Market Return : 59.13%   |   Portfolio Return : 191.90%   |   position : -1   |   portfolio_valuation : 2919.046882131722   |
++Market Return : 59.13%   |   Portfolio Return : 54.51%   |   position : 1   |   portfolio_valuation : 1545.099279026281   |
++Market Return : 59.13%   |   Portfolio Return : 87.70%   |   position : -1   |   portfolio_valuation : 1877.0258218167294   |
++Market Return : 59.13%   |   Portfolio Return : 70.57%   |   position : 0   |   portfolio_valuation : 1705.6565885893167   |
++Market Return : 59.13%   |   Portfolio Return : 84.99%   |   position : 1   |   portfolio_valuation : 1849.8813573752668   |
++Market Return : 59.13%   |   Portfolio Return : 57.60%   |   position : -1   |   portfolio_valuation : 1576.0051099709565   |
++Market Return : 59.13%   |   Portfolio Return : 96.46%   |   position : -1   |   portfolio_valuation : 1964.6212347349522   |
++Market Return : 59.13%   |   Portfolio Return : 78.15%   |   position : -1   |   portfolio_valuation : 1781.453213404887   |
++Market Return : 59.13%   |   Portfolio Return : 71.41%   |   position : 0   |   portfolio_valuation : 1714.1079918260373   |
++Market Return : 59.13%   |   Portfolio Return : 66.21%   |   position : 0   |   portfolio_valuation : 1662.1372206622048   |
++Market Return : 59.13%   |   Portfolio Return : 137.03%   |   position : 0   |   portfolio_valuation : 2370.3390456358165   |
++Market Return : 59.13%   |   Portfolio Return : 82.90%   |   position : 0   |   portfolio_valuation : 1828.9924582026094   |
++Market Return : 59.13%   |   Portfolio Return : 76.08%   |   position : 0   |   portfolio_valuation : 1760.8073534453506   |
++Market Return : 59.13%   |   Portfolio Return : 12.49%   |   position : 1   |   portfolio_valuation : 1124.91840071925   |
++Market Return : 59.13%   |   Portfolio Return : 75.65%   |   position : 0   |   portfolio_valuation : 1756.4942341579485   |
++Market Return : 59.13%   |   Portfolio Return : 205.44%   |   position : 1   |   portfolio_valuation : 3054.3647641260936   |
++Market Return : 59.13%   |   Portfolio Return : 57.05%   |   position : -1   |   portfolio_valuation : 1570.524532285167   |
++Market Return : 59.13%   |   Portfolio Return : 151.44%   |   position : 1   |   portfolio_valuation : 2514.415156529418   |
++Market Return : 59.13%   |   Portfolio Return : 54.07%   |   position : 1   |   portfolio_valuation : 1540.705781854762   |
++Market Return : 59.13%   |   Portfolio Return : 242.60%   |   position : 0   |   portfolio_valuation : 3426.0372298014126   |
++Market Return : 59.13%   |   Portfolio Return : 74.42%   |   position : 0   |   portfolio_valuation : 1744.244936875848   |
++Market Return : 59.13%   |   Portfolio Return : 178.73%   |   position : -1   |   portfolio_valuation : 2787.2872020190252   |
++Market Return : 59.13%   |   Portfolio Return : 153.69%   |   position : 1   |   portfolio_valuation : 2536.940943007637   |
++Market Return : 59.13%   |   Portfolio Return : 261.55%   |   position : 0   |   portfolio_valuation : 3615.4756780133175   |
++Market Return : 59.13%   |   Portfolio Return : 76.32%   |   position : 1   |   portfolio_valuation : 1763.212499503857   |
++Market Return : 59.13%   |   Portfolio Return : 61.45%   |   position : -1   |   portfolio_valuation : 1614.5016615839497   |
++Market Return : 59.13%   |   Portfolio Return : 102.11%   |   position : -1   |   portfolio_valuation : 2021.0825153186784   |
++Market Return : 59.13%   |   Portfolio Return : 232.33%   |   position : -1   |   portfolio_valuation : 3323.281127472327   |
++Market Return : 59.13%   |   Portfolio Return : 273.99%   |   position : -1   |   portfolio_valuation : 3739.917832519071   |
++Market Return : 59.13%   |   Portfolio Return : 40.26%   |   position : 0   |   portfolio_valuation : 1402.646251332677   |
++Market Return : 59.13%   |   Portfolio Return : 87.65%   |   position : -1   |   portfolio_valuation : 1876.4714416243448   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 223.46%   |   position : 1   |   portfolio_valuation : 3234.553988632565   |
++Market Return : 59.13%   |   Portfolio Return : 184.68%   |   position : 1   |   portfolio_valuation : 2846.8237011530737   |
++Market Return : 59.13%   |   Portfolio Return : 129.31%   |   position : 1   |   portfolio_valuation : 2293.0883473858717   |
++Market Return : 59.13%   |   Portfolio Return : 276.96%   |   position : 1   |   portfolio_valuation : 3769.5929001915947   |
++Market Return : 59.13%   |   Portfolio Return : 211.88%   |   position : 1   |   portfolio_valuation : 3118.8400267119305   |
++Market Return : 59.13%   |   Portfolio Return : 190.41%   |   position : 1   |   portfolio_valuation : 2904.130954505192   |
++Market Return : 59.13%   |   Portfolio Return : 186.44%   |   position : 0   |   portfolio_valuation : 2864.4356630685807   |
++Market Return : 59.13%   |   Portfolio Return : 188.49%   |   position : 1   |   portfolio_valuation : 2884.91106721883   |
++Market Return : 59.13%   |   Portfolio Return : 493.88%   |   position : 1   |   portfolio_valuation : 5938.793604597124   |
++Market Return : 59.13%   |   Portfolio Return : 165.02%   |   position : 1   |   portfolio_valuation : 2650.1549064351   |
++Market Return : 59.13%   |   Portfolio Return : 220.20%   |   position : 0   |   portfolio_valuation : 3201.990120875478   |
++Market Return : 59.13%   |   Portfolio Return : 209.31%   |   position : 1   |   portfolio_valuation : 3093.123376636329   |
++Market Return : 59.13%   |   Portfolio Return : 107.88%   |   position : 1   |   portfolio_valuation : 2078.7882150105847   |
++Market Return : 59.13%   |   Portfolio Return : 229.13%   |   position : 1   |   portfolio_valuation : 3291.3204063493254   |
++Market Return : 59.13%   |   Portfolio Return : 74.31%   |   position : 1   |   portfolio_valuation : 1743.0567532835303   |
++Market Return : 59.13%   |   Portfolio Return : 124.11%   |   position : 1   |   portfolio_valuation : 2241.118098942171   |
++Market Return : 59.13%   |   Portfolio Return : 210.03%   |   position : 0   |   portfolio_valuation : 3100.2777620143715   |
++Market Return : 59.13%   |   Portfolio Return : 194.38%   |   position : 0   |   portfolio_valuation : 2943.757957482239   |
++Market Return : 59.13%   |   Portfolio Return : 348.60%   |   position : 1   |   portfolio_valuation : 4485.971897679637   |
++Market Return : 59.13%   |   Portfolio Return : 319.16%   |   position : 1   |   portfolio_valuation : 4191.6150124506485   |
++Market Return : 59.13%   |   Portfolio Return : 276.03%   |   position : 1   |   portfolio_valuation : 3760.339793148282   |
++Market Return : 59.13%   |   Portfolio Return : 199.92%   |   position : 1   |   portfolio_valuation : 2999.163963497953   |
++Market Return : 59.13%   |   Portfolio Return : 129.89%   |   position : 0   |   portfolio_valuation : 2298.9254870946047   |
++Market Return : 59.13%   |   Portfolio Return : 103.22%   |   position : 1   |   portfolio_valuation : 2032.1828289276425   |
++Market Return : 59.13%   |   Portfolio Return : 125.14%   |   position : 1   |   portfolio_valuation : 2251.3756109006677   |
++Market Return : 59.13%   |   Portfolio Return : 266.53%   |   position : 1   |   portfolio_valuation : 3665.349480068478   |
++Market Return : 59.13%   |   Portfolio Return : 338.79%   |   position : 1   |   portfolio_valuation : 4387.925851105283   |
++Market Return : 59.13%   |   Portfolio Return : 168.88%   |   position : 0   |   portfolio_valuation : 2688.759515990124   |
++Market Return : 59.13%   |   Portfolio Return : 268.88%   |   position : 1   |   portfolio_valuation : 3688.8131499401234   |
++Market Return : 59.13%   |   Portfolio Return : 374.79%   |   position : 1   |   portfolio_valuation : 4747.945062765657   |
++Market Return : 59.13%   |   Portfolio Return : 252.96%   |   position : 0   |   portfolio_valuation : 3529.606504685541   |
++Market Return : 59.13%   |   Portfolio Return : 467.74%   |   position : 0   |   portfolio_valuation : 5677.424883305648   |
++Market Return : 59.13%   |   Portfolio Return : 143.04%   |   position : 1   |   portfolio_valuation : 2430.383468635591   |
++Market Return : 59.13%   |   Portfolio Return : 243.91%   |   position : 1   |   portfolio_valuation : 3439.0922319993633   |
++Market Return : 59.13%   |   Portfolio Return : 222.12%   |   position : 1   |   portfolio_valuation : 3221.235092957266   |
++Market Return : 59.13%   |   Portfolio Return : 130.89%   |   position : 1   |   portfolio_valuation : 2308.8731833585266   |
++Market Return : 59.13%   |   Portfolio Return : 156.20%   |   position : 1   |   portfolio_valuation : 2561.9705457107184   |
++Market Return : 59.13%   |   Portfolio Return : 82.37%   |   position : 1   |   portfolio_valuation : 1823.7249852911243   |
++Market Return : 59.13%   |   Portfolio Return : 119.92%   |   position : 1   |   portfolio_valuation : 2199.2142883011065   |
++Market Return : 59.13%   |   Portfolio Return : 273.60%   |   position : 1   |   portfolio_valuation : 3735.9555651935852   |
++Market Return : 59.13%   |   Portfolio Return : 311.81%   |   position : 1   |   portfolio_valuation : 4118.135744392839   |
++Market Return : 59.13%   |   Portfolio Return : 320.60%   |   position : 1   |   portfolio_valuation : 4206.0400634422385   |
++Market Return : 59.13%   |   Portfolio Return : 246.67%   |   position : 0   |   portfolio_valuation : 3466.7260187226193   |
++Market Return : 59.13%   |   Portfolio Return : 420.93%   |   position : 1   |   portfolio_valuation : 5209.267947722753   |
++Market Return : 59.13%   |   Portfolio Return : 160.15%   |   position : 1   |   portfolio_valuation : 2601.472860987364   |
++Market Return : 59.13%   |   Portfolio Return : 211.43%   |   position : 1   |   portfolio_valuation : 3114.332814753409   |
++Market Return : 59.13%   |   Portfolio Return : 312.76%   |   position : 1   |   portfolio_valuation : 4127.610461053386   |
++Market Return : 59.13%   |   Portfolio Return : 105.05%   |   position : 0   |   portfolio_valuation : 2050.496732204528   |
++Market Return : 59.13%   |   Portfolio Return : 234.82%   |   position : 1   |   portfolio_valuation : 3348.198975517965   |
++Market Return : 59.13%   |   Portfolio Return : 217.65%   |   position : 1   |   portfolio_valuation : 3176.4541092463405   |
++Market Return : 59.13%   |   Portfolio Return : 144.23%   |   position : 1   |   portfolio_valuation : 2442.3253725532522   |
++Market Return : 59.13%   |   Portfolio Return : 137.19%   |   position : 1   |   portfolio_valuation : 2371.920014640948   |
++Market Return : 59.13%   |   Portfolio Return : 438.23%   |   position : 1   |   portfolio_valuation : 5382.34170275945   |
++Market Return : 59.13%   |   Portfolio Return : 266.17%   |   position : 1   |   portfolio_valuation : 3661.6695436615287   |
++Market Return : 59.13%   |   Portfolio Return : 203.04%   |   position : 0   |   portfolio_valuation : 3030.4011034962914   |
++Market Return : 59.13%   |   Portfolio Return : 413.11%   |   position : 1   |   portfolio_valuation : 5131.095103611505   |
++Market Return : 59.13%   |   Portfolio Return : 93.99%   |   position : 1   |   portfolio_valuation : 1939.903057383659   |
++Market Return : 59.13%   |   Portfolio Return : 310.78%   |   position : 1   |   portfolio_valuation : 4107.787299430017   |
++Market Return : 59.13%   |   Portfolio Return : 171.01%   |   position : 1   |   portfolio_valuation : 2710.124560793328   |
++Market Return : 59.13%   |   Portfolio Return : 98.73%   |   position : 1   |   portfolio_valuation : 1987.3011943559954   |
++Market Return : 59.13%   |   Portfolio Return : 314.42%   |   position : 0   |   portfolio_valuation : 4144.20395753525   |
++Market Return : 59.13%   |   Portfolio Return : 212.86%   |   position : 1   |   portfolio_valuation : 3128.5691154643937   |
++Market Return : 59.13%   |   Portfolio Return : 59.45%   |   position : 1   |   portfolio_valuation : 1594.5185609130335   |
++Market Return : 59.13%   |   Portfolio Return : 214.08%   |   position : 1   |   portfolio_valuation : 3140.831486854763   |
++Market Return : 59.13%   |   Portfolio Return : 218.17%   |   position : 0   |   portfolio_valuation : 3181.7352724707957   |
++Market Return : 59.13%   |   Portfolio Return : 214.31%   |   position : 1   |   portfolio_valuation : 3143.1034542092443   |
++Market Return : 59.13%   |   Portfolio Return : 404.16%   |   position : 1   |   portfolio_valuation : 5041.607782951871   |
++Market Return : 59.13%   |   Portfolio Return : 238.11%   |   position : 1   |   portfolio_valuation : 3381.130525576961   |
++Market Return : 59.13%   |   Portfolio Return : 230.52%   |   position : -1   |   portfolio_valuation : 3305.1745658276573   |
++Market Return : 59.13%   |   Portfolio Return : 376.64%   |   position : 0   |   portfolio_valuation : 4766.377116368273   |
++Market Return : 59.13%   |   Portfolio Return : 283.92%   |   position : 1   |   portfolio_valuation : 3839.202822327338   |
++Market Return : 59.13%   |   Portfolio Return : 248.84%   |   position : 1   |   portfolio_valuation : 3488.4049616756324   |
++Market Return : 59.13%   |   Portfolio Return : 321.42%   |   position : -1   |   portfolio_valuation : 4214.223278653967   |
++Market Return : 59.13%   |   Portfolio Return : 117.44%   |   position : 1   |   portfolio_valuation : 2174.4358992030784   |
++Market Return : 59.13%   |   Portfolio Return : 330.42%   |   position : 1   |   portfolio_valuation : 4304.158825064831   |
++Market Return : 59.13%   |   Portfolio Return : 173.91%   |   position : 1   |   portfolio_valuation : 2739.0670657299056   |
++Market Return : 59.13%   |   Portfolio Return : 214.10%   |   position : 1   |   portfolio_valuation : 3140.956196075053   |
++Market Return : 59.13%   |   Portfolio Return : 118.16%   |   position : 1   |   portfolio_valuation : 2181.62925394772   |
++Market Return : 59.13%   |   Portfolio Return : 187.88%   |   position : 0   |   portfolio_valuation : 2878.8147095789313   |
++Market Return : 59.13%   |   Portfolio Return : 365.91%   |   position : 1   |   portfolio_valuation : 4659.147827315056   |
++Market Return : 59.13%   |   Portfolio Return : 432.94%   |   position : 0   |   portfolio_valuation : 5329.359490178861   |
++Market Return : 59.13%   |   Portfolio Return : 122.85%   |   position : 1   |   portfolio_valuation : 2228.4914877728556   |
++Market Return : 59.13%   |   Portfolio Return : 199.29%   |   position : 1   |   portfolio_valuation : 2992.860237879224   |
++Market Return : 59.13%   |   Portfolio Return : 190.21%   |   position : 1   |   portfolio_valuation : 2902.0858693654254   |
++Market Return : 59.13%   |   Portfolio Return : 140.18%   |   position : 1   |   portfolio_valuation : 2401.8397702481425   |
++Market Return : 59.13%   |   Portfolio Return : 112.86%   |   position : 0   |   portfolio_valuation : 2128.5705829964277   |
++Market Return : 59.13%   |   Portfolio Return : 110.72%   |   position : 1   |   portfolio_valuation : 2107.2062212397204   |
++Market Return : 59.13%   |   Portfolio Return : 125.18%   |   position : 1   |   portfolio_valuation : 2251.7785996876128   |
++Market Return : 59.13%   |   Portfolio Return : 403.01%   |   position : 1   |   portfolio_valuation : 5030.100639422323   |
++Market Return : 59.13%   |   Portfolio Return : 283.47%   |   position : 1   |   portfolio_valuation : 3834.713622227851   |
++Market Return : 59.13%   |   Portfolio Return : 198.26%   |   position : 1   |   portfolio_valuation : 2982.6280454365196   |
++Market Return : 59.13%   |   Portfolio Return : 265.63%   |   position : 1   |   portfolio_valuation : 3656.2827134394024   |
++Market Return : 59.13%   |   Portfolio Return : 136.51%   |   position : 1   |   portfolio_valuation : 2365.099767844496   |
++Market Return : 59.13%   |   Portfolio Return : 320.38%   |   position : 1   |   portfolio_valuation : 4203.809383102078   |
++Market Return : 59.13%   |   Portfolio Return : 287.20%   |   position : 0   |   portfolio_valuation : 3871.9733899441812   |
++Market Return : 59.13%   |   Portfolio Return : 188.17%   |   position : 1   |   portfolio_valuation : 2881.6523194823767   |
++Market Return : 59.13%   |   Portfolio Return : 133.73%   |   position : 0   |   portfolio_valuation : 2337.2556301799627   |
++Market Return : 59.13%   |   Portfolio Return : 273.68%   |   position : 1   |   portfolio_valuation : 3736.8380599353045   |
++Market Return : 59.13%   |   Portfolio Return : 316.76%   |   position : 1   |   portfolio_valuation : 4167.558957662036   |
++Market Return : 59.13%   |   Portfolio Return : 97.64%   |   position : 1   |   portfolio_valuation : 1976.420462071035   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 177.90%   |   position : -1   |   portfolio_valuation : 2779.033799615193   |
++Market Return : 59.13%   |   Portfolio Return : 97.07%   |   position : 1   |   portfolio_valuation : 1970.7112904780663   |
++Market Return : 59.13%   |   Portfolio Return : 191.29%   |   position : 1   |   portfolio_valuation : 2912.872432584612   |
++Market Return : 59.13%   |   Portfolio Return : 201.48%   |   position : 1   |   portfolio_valuation : 3014.84517843725   |
++Market Return : 59.13%   |   Portfolio Return : 120.96%   |   position : 1   |   portfolio_valuation : 2209.632106916192   |
++Market Return : 59.13%   |   Portfolio Return : 63.68%   |   position : 1   |   portfolio_valuation : 1636.8118529702433   |
++Market Return : 59.13%   |   Portfolio Return : 135.00%   |   position : 0   |   portfolio_valuation : 2349.9765402414146   |
++Market Return : 59.13%   |   Portfolio Return : 322.40%   |   position : 1   |   portfolio_valuation : 4223.988816789127   |
++Market Return : 59.13%   |   Portfolio Return : 297.77%   |   position : 1   |   portfolio_valuation : 3977.6875681775514   |
++Market Return : 59.13%   |   Portfolio Return : 272.42%   |   position : 1   |   portfolio_valuation : 3724.2489894411033   |
++Market Return : 59.13%   |   Portfolio Return : 142.88%   |   position : 1   |   portfolio_valuation : 2428.7792167835505   |
++Market Return : 59.13%   |   Portfolio Return : 254.85%   |   position : 1   |   portfolio_valuation : 3548.5358182609566   |
++Market Return : 59.13%   |   Portfolio Return : 89.78%   |   position : 1   |   portfolio_valuation : 1897.7579300736459   |
++Market Return : 59.13%   |   Portfolio Return : 270.56%   |   position : 1   |   portfolio_valuation : 3705.5608873282517   |
++Market Return : 59.13%   |   Portfolio Return : 161.26%   |   position : 1   |   portfolio_valuation : 2612.5780265265043   |
++Market Return : 59.13%   |   Portfolio Return : 73.22%   |   position : 1   |   portfolio_valuation : 1732.1679066265779   |
++Market Return : 59.13%   |   Portfolio Return : 247.32%   |   position : 1   |   portfolio_valuation : 3473.165433778243   |
++Market Return : 59.13%   |   Portfolio Return : 247.68%   |   position : 1   |   portfolio_valuation : 3476.774209603384   |
++Market Return : 59.13%   |   Portfolio Return : 36.50%   |   position : 1   |   portfolio_valuation : 1365.0190841206659   |
++Market Return : 59.13%   |   Portfolio Return : -43.40%   |   position : 0   |   portfolio_valuation : 566.0032199106048   |
++Market Return : 59.13%   |   Portfolio Return : 250.15%   |   position : 1   |   portfolio_valuation : 3501.516967975149   |
++Market Return : 59.13%   |   Portfolio Return : 257.39%   |   position : 1   |   portfolio_valuation : 3573.861947975405   |
++Market Return : 59.13%   |   Portfolio Return : 71.62%   |   position : 0   |   portfolio_valuation : 1716.2208006664894   |
++Market Return : 59.13%   |   Portfolio Return : 161.38%   |   position : 1   |   portfolio_valuation : 2613.8465513525466   |
++Market Return : 59.13%   |   Portfolio Return : 80.64%   |   position : 1   |   portfolio_valuation : 1806.4422838598898   |
++Market Return : 59.13%   |   Portfolio Return : 112.62%   |   position : 1   |   portfolio_valuation : 2126.2487178390356   |
++Market Return : 59.13%   |   Portfolio Return : 308.44%   |   position : 1   |   portfolio_valuation : 4084.41049169862   |
++Market Return : 59.13%   |   Portfolio Return : 71.80%   |   position : 1   |   portfolio_valuation : 1717.9927081508324   |
++Market Return : 59.13%   |   Portfolio Return : 83.48%   |   position : 1   |   portfolio_valuation : 1834.7884781298405   |
++Market Return : 59.13%   |   Portfolio Return : 157.05%   |   position : 1   |   portfolio_valuation : 2570.4748647552833   |
++Market Return : 59.13%   |   Portfolio Return : 56.00%   |   position : 0   |   portfolio_valuation : 1560.0248138139086   |
++Market Return : 59.13%   |   Portfolio Return : 174.62%   |   position : 0   |   portfolio_valuation : 2746.168198016964   |
++Market Return : 59.13%   |   Portfolio Return : 62.20%   |   position : 1   |   portfolio_valuation : 1621.9639681016495   |
++Market Return : 59.13%   |   Portfolio Return : -12.82%   |   position : 0   |   portfolio_valuation : 871.7595274779791   |
++Market Return : 59.13%   |   Portfolio Return : 61.15%   |   position : 1   |   portfolio_valuation : 1611.5468607091752   |
++Market Return : 59.13%   |   Portfolio Return : 24.17%   |   position : 1   |   portfolio_valuation : 1241.7105625012405   |
++Market Return : 59.13%   |   Portfolio Return : 130.15%   |   position : 1   |   portfolio_valuation : 2301.5338054368385   |
++Market Return : 59.13%   |   Portfolio Return : 133.81%   |   position : 1   |   portfolio_valuation : 2338.052714020401   |
++Market Return : 59.13%   |   Portfolio Return : 156.14%   |   position : 1   |   portfolio_valuation : 2561.414266380819   |
++Market Return : 59.13%   |   Portfolio Return : 67.57%   |   position : 1   |   portfolio_valuation : 1675.6966739925306   |
++Market Return : 59.13%   |   Portfolio Return : 197.56%   |   position : 1   |   portfolio_valuation : 2975.5698771094117   |
++Market Return : 59.13%   |   Portfolio Return : 95.12%   |   position : 1   |   portfolio_valuation : 1951.200045828707   |
++Market Return : 59.13%   |   Portfolio Return : 287.61%   |   position : 1   |   portfolio_valuation : 3876.0643268864787   |
++Market Return : 59.13%   |   Portfolio Return : 153.30%   |   position : 1   |   portfolio_valuation : 2533.034316383963   |
++Market Return : 59.13%   |   Portfolio Return : 50.27%   |   position : 1   |   portfolio_valuation : 1502.6862738281507   |
++Market Return : 59.13%   |   Portfolio Return : 129.96%   |   position : 1   |   portfolio_valuation : 2299.6006631768   |
++Market Return : 59.13%   |   Portfolio Return : 378.36%   |   position : 1   |   portfolio_valuation : 4783.588308644718   |
++Market Return : 59.13%   |   Portfolio Return : 171.89%   |   position : 1   |   portfolio_valuation : 2718.8665413191493   |
++Market Return : 59.13%   |   Portfolio Return : 137.37%   |   position : 1   |   portfolio_valuation : 2373.7350491476004   |
++Market Return : 59.13%   |   Portfolio Return : 132.11%   |   position : 1   |   portfolio_valuation : 2321.0928067936793   |
++Market Return : 59.13%   |   Portfolio Return : -19.81%   |   position : 1   |   portfolio_valuation : 801.8940020693535   |
++Market Return : 59.13%   |   Portfolio Return : 218.81%   |   position : 1   |   portfolio_valuation : 3188.131186358087   |
++Market Return : 59.13%   |   Portfolio Return : 126.81%   |   position : 0   |   portfolio_valuation : 2268.093537398512   |
++Market Return : 59.13%   |   Portfolio Return : 14.67%   |   position : -1   |   portfolio_valuation : 1146.7432313433435   |
++Market Return : 59.13%   |   Portfolio Return : 67.14%   |   position : 1   |   portfolio_valuation : 1671.431276746971   |
++Market Return : 59.13%   |   Portfolio Return : 251.09%   |   position : 1   |   portfolio_valuation : 3510.8961763389966   |
++Market Return : 59.13%   |   Portfolio Return : 93.99%   |   position : 1   |   portfolio_valuation : 1939.9150054272338   |
++Market Return : 59.13%   |   Portfolio Return : 266.96%   |   position : 1   |   portfolio_valuation : 3669.5814529374575   |
++Market Return : 59.13%   |   Portfolio Return : 124.71%   |   position : 1   |   portfolio_valuation : 2247.109384744042   |
++Market Return : 59.13%   |   Portfolio Return : 110.64%   |   position : 1   |   portfolio_valuation : 2106.433515834611   |
++Market Return : 59.13%   |   Portfolio Return : 321.92%   |   position : 0   |   portfolio_valuation : 4219.1651442608345   |
++Market Return : 59.13%   |   Portfolio Return : 188.10%   |   position : 1   |   portfolio_valuation : 2881.00161000938   |
++Market Return : 59.13%   |   Portfolio Return : 178.07%   |   position : 1   |   portfolio_valuation : 2780.7049789873668   |
++Market Return : 59.13%   |   Portfolio Return : 135.50%   |   position : 1   |   portfolio_valuation : 2355.015586193508   |
++Market Return : 59.13%   |   Portfolio Return : 256.73%   |   position : 0   |   portfolio_valuation : 3567.282922915185   |
++Market Return : 59.13%   |   Portfolio Return : 203.28%   |   position : 1   |   portfolio_valuation : 3032.750015984176   |
++Market Return : 59.13%   |   Portfolio Return : 307.62%   |   position : 1   |   portfolio_valuation : 4076.222897950432   |
++Market Return : 59.13%   |   Portfolio Return : 197.11%   |   position : 1   |   portfolio_valuation : 2971.087007879247   |
++Market Return : 59.13%   |   Portfolio Return : 58.92%   |   position : 1   |   portfolio_valuation : 1589.1964938953447   |
++Market Return : 59.13%   |   Portfolio Return : 347.88%   |   position : 1   |   portfolio_valuation : 4478.765081356642   |
++Market Return : 59.13%   |   Portfolio Return : 165.22%   |   position : 1   |   portfolio_valuation : 2652.1504856144156   |
++Market Return : 59.13%   |   Portfolio Return : 69.23%   |   position : 0   |   portfolio_valuation : 1692.3127221098346   |
++Market Return : 59.13%   |   Portfolio Return : 106.40%   |   position : 1   |   portfolio_valuation : 2064.0350653062046   |
++Market Return : 59.13%   |   Portfolio Return : 79.99%   |   position : 1   |   portfolio_valuation : 1799.8562707735007   |
++Market Return : 59.13%   |   Portfolio Return : 72.25%   |   position : 1   |   portfolio_valuation : 1722.5472002861284   |
++Market Return : 59.13%   |   Portfolio Return : 170.42%   |   position : 1   |   portfolio_valuation : 2704.2212838992255   |
++Market Return : 59.13%   |   Portfolio Return : 140.86%   |   position : 1   |   portfolio_valuation : 2408.5634163350414   |
++Market Return : 59.13%   |   Portfolio Return : 194.55%   |   position : 1   |   portfolio_valuation : 2945.5117372942905   |
++Market Return : 59.13%   |   Portfolio Return : 232.20%   |   position : 1   |   portfolio_valuation : 3321.979433708668   |
++Market Return : 59.13%   |   Portfolio Return : 131.61%   |   position : 1   |   portfolio_valuation : 2316.144739320164   |
++Market Return : 59.13%   |   Portfolio Return : 118.04%   |   position : 1   |   portfolio_valuation : 2180.3823696705754   |
++Market Return : 59.13%   |   Portfolio Return : 262.59%   |   position : 1   |   portfolio_valuation : 3625.869106027789   |
++Market Return : 59.13%   |   Portfolio Return : 135.13%   |   position : 1   |   portfolio_valuation : 2351.321059839127   |
++Market Return : 59.13%   |   Portfolio Return : 266.29%   |   position : 1   |   portfolio_valuation : 3662.929005300589   |
++Market Return : 59.13%   |   Portfolio Return : 68.17%   |   position : 1   |   portfolio_valuation : 1681.7107144640522   |
++Market Return : 59.13%   |   Portfolio Return : 253.12%   |   position : 1   |   portfolio_valuation : 3531.2017817702917   |
++Market Return : 59.13%   |   Portfolio Return : 287.65%   |   position : 1   |   portfolio_valuation : 3876.4582963950443   |
++Market Return : 59.13%   |   Portfolio Return : 246.90%   |   position : 1   |   portfolio_valuation : 3469.02197974059   |
++Market Return : 59.13%   |   Portfolio Return : 142.73%   |   position : 1   |   portfolio_valuation : 2427.2871805539935   |
++Market Return : 59.13%   |   Portfolio Return : 95.96%   |   position : 1   |   portfolio_valuation : 1959.6060355711938   |
++Market Return : 59.13%   |   Portfolio Return : 335.95%   |   position : 1   |   portfolio_valuation : 4359.524958064952   |
++Market Return : 59.13%   |   Portfolio Return : 340.63%   |   position : 1   |   portfolio_valuation : 4406.331070729141   |
++Market Return : 59.13%   |   Portfolio Return : 147.53%   |   position : 1   |   portfolio_valuation : 2475.317688844489   |
++Market Return : 59.13%   |   Portfolio Return : 150.62%   |   position : 1   |   portfolio_valuation : 2506.2440125318667   |
++Market Return : 59.13%   |   Portfolio Return : 263.68%   |   position : 0   |   portfolio_valuation : 3636.8068526222287   |
++Market Return : 59.13%   |   Portfolio Return : 92.29%   |   position : 1   |   portfolio_valuation : 1922.897035256788   |
++Market Return : 59.13%   |   Portfolio Return : 165.07%   |   position : 1   |   portfolio_valuation : 2650.6803255859363   |
++Market Return : 59.13%   |   Portfolio Return : 48.06%   |   position : -1   |   portfolio_valuation : 1480.5515394347606   |
++Market Return : 59.13%   |   Portfolio Return : 163.90%   |   position : 0   |   portfolio_valuation : 2638.964531540101   |
++Market Return : 59.13%   |   Portfolio Return : 418.78%   |   position : 1   |   portfolio_valuation : 5187.787784022036   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 157.29%   |   position : 0   |   portfolio_valuation : 2572.8709398925744   |
++Market Return : 59.13%   |   Portfolio Return : -15.85%   |   position : 0   |   portfolio_valuation : 841.5002946304767   |
++Market Return : 59.13%   |   Portfolio Return : 119.53%   |   position : 1   |   portfolio_valuation : 2195.2681665613745   |
++Market Return : 59.13%   |   Portfolio Return : -11.85%   |   position : 1   |   portfolio_valuation : 881.4925647132133   |
++Market Return : 59.13%   |   Portfolio Return : 399.76%   |   position : 0   |   portfolio_valuation : 4997.627653000612   |
++Market Return : 59.13%   |   Portfolio Return : 15.68%   |   position : -1   |   portfolio_valuation : 1156.8329775734587   |
++Market Return : 59.13%   |   Portfolio Return : 382.67%   |   position : 0   |   portfolio_valuation : 4826.713414490478   |
++Market Return : 59.13%   |   Portfolio Return : 23.67%   |   position : 1   |   portfolio_valuation : 1236.6746264158753   |
++Market Return : 59.13%   |   Portfolio Return : 39.06%   |   position : 1   |   portfolio_valuation : 1390.5575869726824   |
++Market Return : 59.13%   |   Portfolio Return : 181.39%   |   position : 1   |   portfolio_valuation : 2813.9328523727945   |
++Market Return : 59.13%   |   Portfolio Return : 91.84%   |   position : 0   |   portfolio_valuation : 1918.4102322573376   |
++Market Return : 59.13%   |   Portfolio Return : 347.92%   |   position : 1   |   portfolio_valuation : 4479.160669450208   |
++Market Return : 59.13%   |   Portfolio Return : 11.85%   |   position : 0   |   portfolio_valuation : 1118.5039266210756   |
++Market Return : 59.13%   |   Portfolio Return : 277.11%   |   position : 1   |   portfolio_valuation : 3771.0903970660315   |
++Market Return : 59.13%   |   Portfolio Return : 88.65%   |   position : 0   |   portfolio_valuation : 1886.4836741507377   |
++Market Return : 59.13%   |   Portfolio Return : 241.35%   |   position : 0   |   portfolio_valuation : 3413.4876387909053   |
++Market Return : 59.13%   |   Portfolio Return : 97.33%   |   position : 1   |   portfolio_valuation : 1973.3094569491532   |
++Market Return : 59.13%   |   Portfolio Return : 77.01%   |   position : 0   |   portfolio_valuation : 1770.1284705502885   |
++Market Return : 59.13%   |   Portfolio Return : 56.03%   |   position : 1   |   portfolio_valuation : 1560.259238643483   |
++Market Return : 59.13%   |   Portfolio Return : 191.20%   |   position : 1   |   portfolio_valuation : 2912.0184370676375   |
++Market Return : 59.13%   |   Portfolio Return : 14.88%   |   position : 1   |   portfolio_valuation : 1148.7623044351512   |
++Market Return : 59.13%   |   Portfolio Return : 64.42%   |   position : 1   |   portfolio_valuation : 1644.1687847829235   |
++Market Return : 59.13%   |   Portfolio Return : 60.56%   |   position : 0   |   portfolio_valuation : 1605.618000478417   |
++Market Return : 59.13%   |   Portfolio Return : 93.33%   |   position : 1   |   portfolio_valuation : 1933.3353408293126   |
++Market Return : 59.13%   |   Portfolio Return : 455.22%   |   position : 0   |   portfolio_valuation : 5552.177411694024   |
++Market Return : 59.13%   |   Portfolio Return : 214.00%   |   position : 0   |   portfolio_valuation : 3140.0096558290224   |
++Market Return : 59.13%   |   Portfolio Return : 38.76%   |   position : 1   |   portfolio_valuation : 1387.6308974977092   |
++Market Return : 59.13%   |   Portfolio Return : 330.87%   |   position : 0   |   portfolio_valuation : 4308.662713189802   |
++Market Return : 59.13%   |   Portfolio Return : 58.83%   |   position : 0   |   portfolio_valuation : 1588.2577718901898   |
++Market Return : 59.13%   |   Portfolio Return : 87.32%   |   position : 0   |   portfolio_valuation : 1873.2466936370963   |
++Market Return : 59.13%   |   Portfolio Return : 17.69%   |   position : 1   |   portfolio_valuation : 1176.947874647791   |
++Market Return : 59.13%   |   Portfolio Return : -16.86%   |   position : 1   |   portfolio_valuation : 831.3881537999916   |
++Market Return : 59.13%   |   Portfolio Return : 209.68%   |   position : 1   |   portfolio_valuation : 3096.803302526279   |
++Market Return : 59.13%   |   Portfolio Return : 137.35%   |   position : -1   |   portfolio_valuation : 2373.4972274732368   |
++Market Return : 59.13%   |   Portfolio Return : 65.95%   |   position : 0   |   portfolio_valuation : 1659.5319479067646   |
++Market Return : 59.13%   |   Portfolio Return : 55.28%   |   position : 1   |   portfolio_valuation : 1552.8132557861015   |
++Market Return : 59.13%   |   Portfolio Return : 69.72%   |   position : 0   |   portfolio_valuation : 1697.2126534549243   |
++Market Return : 59.13%   |   Portfolio Return : 164.96%   |   position : 1   |   portfolio_valuation : 2649.599982533814   |
++Market Return : 59.13%   |   Portfolio Return : 363.06%   |   position : 0   |   portfolio_valuation : 4630.591989633314   |
++Market Return : 59.13%   |   Portfolio Return : -0.13%   |   position : 1   |   portfolio_valuation : 998.6687589608332   |
++Market Return : 59.13%   |   Portfolio Return : 41.39%   |   position : 0   |   portfolio_valuation : 1413.8925315251638   |
++Market Return : 59.13%   |   Portfolio Return : 69.71%   |   position : -1   |   portfolio_valuation : 1697.1272852790175   |
++Market Return : 59.13%   |   Portfolio Return : 80.02%   |   position : 1   |   portfolio_valuation : 1800.1567690030956   |
++Market Return : 59.13%   |   Portfolio Return : 98.24%   |   position : 1   |   portfolio_valuation : 1982.3536801358675   |
++Market Return : 59.13%   |   Portfolio Return : -31.25%   |   position : 0   |   portfolio_valuation : 687.500780550103   |
++Market Return : 59.13%   |   Portfolio Return : 154.52%   |   position : 0   |   portfolio_valuation : 2545.1694680357823   |
++Market Return : 59.13%   |   Portfolio Return : 164.14%   |   position : 1   |   portfolio_valuation : 2641.4158576610635   |
++Market Return : 59.13%   |   Portfolio Return : 70.90%   |   position : 0   |   portfolio_valuation : 1708.956802136369   |
++Market Return : 59.13%   |   Portfolio Return : 81.17%   |   position : 0   |   portfolio_valuation : 1811.7479165668312   |
++Market Return : 59.13%   |   Portfolio Return : 295.28%   |   position : 0   |   portfolio_valuation : 3952.8155309386902   |
++Market Return : 59.13%   |   Portfolio Return : 90.48%   |   position : 0   |   portfolio_valuation : 1904.8431195495853   |
++Market Return : 59.13%   |   Portfolio Return : 227.65%   |   position : 0   |   portfolio_valuation : 3276.4622826801237   |
++Market Return : 59.13%   |   Portfolio Return : 90.23%   |   position : 1   |   portfolio_valuation : 1902.2904834671922   |
++Market Return : 59.13%   |   Portfolio Return : 116.73%   |   position : 1   |   portfolio_valuation : 2167.345322119408   |
++Market Return : 59.13%   |   Portfolio Return : 104.95%   |   position : 1   |   portfolio_valuation : 2049.523531495971   |
++Market Return : 59.13%   |   Portfolio Return : 310.46%   |   position : 0   |   portfolio_valuation : 4104.64716419586   |
++Market Return : 59.13%   |   Portfolio Return : 35.64%   |   position : 0   |   portfolio_valuation : 1356.3868798165126   |
++Market Return : 59.13%   |   Portfolio Return :  2.45%   |   position : 1   |   portfolio_valuation : 1024.4792181110856   |
++Market Return : 59.13%   |   Portfolio Return : 286.87%   |   position : 0   |   portfolio_valuation : 3868.715595446693   |
++Market Return : 59.13%   |   Portfolio Return : 228.34%   |   position : 1   |   portfolio_valuation : 3283.3639906048256   |
++Market Return : 59.13%   |   Portfolio Return : 56.66%   |   position : 1   |   portfolio_valuation : 1566.6037230892155   |
++Market Return : 59.13%   |   Portfolio Return : 457.92%   |   position : 0   |   portfolio_valuation : 5579.219431278883   |
++Market Return : 59.13%   |   Portfolio Return : 350.15%   |   position : 0   |   portfolio_valuation : 4501.532090289692   |
++Market Return : 59.13%   |   Portfolio Return : 76.55%   |   position : 1   |   portfolio_valuation : 1765.4847763885805   |
++Market Return : 59.13%   |   Portfolio Return : 59.04%   |   position : 0   |   portfolio_valuation : 1590.397830434816   |
++Market Return : 59.13%   |   Portfolio Return : 46.13%   |   position : 1   |   portfolio_valuation : 1461.2955857439397   |
++Market Return : 59.13%   |   Portfolio Return : 69.85%   |   position : 0   |   portfolio_valuation : 1698.5120917056602   |
++Market Return : 59.13%   |   Portfolio Return : 114.16%   |   position : 0   |   portfolio_valuation : 2141.6048155296157   |
++Market Return : 59.13%   |   Portfolio Return : 41.53%   |   position : 1   |   portfolio_valuation : 1415.3177068053833   |
++Market Return : 59.13%   |   Portfolio Return : 103.14%   |   position : 0   |   portfolio_valuation : 2031.3501559288206   |
++Market Return : 59.13%   |   Portfolio Return : 156.09%   |   position : 0   |   portfolio_valuation : 2560.940056024628   |
++Market Return : 59.13%   |   Portfolio Return : 115.22%   |   position : 1   |   portfolio_valuation : 2152.212302318364   |
++Market Return : 59.13%   |   Portfolio Return : 379.87%   |   position : 0   |   portfolio_valuation : 4798.733638693641   |
++Market Return : 59.13%   |   Portfolio Return : 224.98%   |   position : 0   |   portfolio_valuation : 3249.8292385796553   |
++Market Return : 59.13%   |   Portfolio Return : 370.67%   |   position : 1   |   portfolio_valuation : 4706.705913863609   |
++Market Return : 59.13%   |   Portfolio Return : 60.16%   |   position : 0   |   portfolio_valuation : 1601.5844653168547   |
++Market Return : 59.13%   |   Portfolio Return : 65.74%   |   position : 0   |   portfolio_valuation : 1657.4019076267657   |
++Market Return : 59.13%   |   Portfolio Return : 237.36%   |   position : 1   |   portfolio_valuation : 3373.6493406498016   |
++Market Return : 59.13%   |   Portfolio Return : 40.41%   |   position : 1   |   portfolio_valuation : 1404.1242374368742   |
++Market Return : 59.13%   |   Portfolio Return : 303.08%   |   position : 0   |   portfolio_valuation : 4030.8273094671504   |
++Market Return : 59.13%   |   Portfolio Return :  1.92%   |   position : 1   |   portfolio_valuation : 1019.1588178275288   |
++Market Return : 59.13%   |   Portfolio Return :  5.93%   |   position : 1   |   portfolio_valuation : 1059.3053869370108   |
++Market Return : 59.13%   |   Portfolio Return : 235.61%   |   position : 0   |   portfolio_valuation : 3356.0707415949378   |
++Market Return : 59.13%   |   Portfolio Return : 22.42%   |   position : 0   |   portfolio_valuation : 1224.2488938202675   |
++Market Return : 59.13%   |   Portfolio Return : 243.20%   |   position : 0   |   portfolio_valuation : 3431.998186397727   |
++Market Return : 59.13%   |   Portfolio Return : 124.37%   |   position : 1   |   portfolio_valuation : 2243.7080734151245   |
++Market Return : 59.13%   |   Portfolio Return : 89.79%   |   position : 1   |   portfolio_valuation : 1897.8738551718088   |
++Market Return : 59.13%   |   Portfolio Return : 179.89%   |   position : 0   |   portfolio_valuation : 2798.8556216270376   |
++Market Return : 59.13%   |   Portfolio Return : 261.07%   |   position : 1   |   portfolio_valuation : 3610.651611304919   |
++Market Return : 59.13%   |   Portfolio Return : 80.98%   |   position : 1   |   portfolio_valuation : 1809.8016387627747   |
++Market Return : 59.13%   |   Portfolio Return : 90.80%   |   position : 1   |   portfolio_valuation : 1908.017258418622   |
++Market Return : 59.13%   |   Portfolio Return : 129.88%   |   position : 1   |   portfolio_valuation : 2298.7699834004848   |
++Market Return : 59.13%   |   Portfolio Return : 40.17%   |   position : 1   |   portfolio_valuation : 1401.6612577617582   |
++Market Return : 59.13%   |   Portfolio Return : 191.11%   |   position : 0   |   portfolio_valuation : 2911.0918668024356   |
++Market Return : 59.13%   |   Portfolio Return : 186.40%   |   position : 0   |   portfolio_valuation : 2864.013702105737   |
++Market Return : 59.13%   |   Portfolio Return : 233.01%   |   position : 1   |   portfolio_valuation : 3330.107036550747   |
++Market Return : 59.13%   |   Portfolio Return : 205.27%   |   position : 0   |   portfolio_valuation : 3052.749978299621   |
++Market Return : 59.13%   |   Portfolio Return : 174.45%   |   position : 0   |   portfolio_valuation : 2744.512396038197   |
++Market Return : 59.13%   |   Portfolio Return : -13.12%   |   position : 1   |   portfolio_valuation : 868.7778489164148   |
++Market Return : 59.13%   |   Portfolio Return : 301.64%   |   position : 1   |   portfolio_valuation : 4016.4330668088082   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++Market Return : 59.13%   |   Portfolio Return : 478.09%   |   position : 1   |   portfolio_valuation : 5780.854296141661   |
++Market Return : 59.13%   |   Portfolio Return : 421.95%   |   position : -1   |   portfolio_valuation : 5219.540709076466   |
++Market Return : 59.13%   |   Portfolio Return : 110.52%   |   position : -1   |   portfolio_valuation : 2105.2347945105757   |
++Market Return : 59.13%   |   Portfolio Return : 443.22%   |   position : 1   |   portfolio_valuation : 5432.181237414817   |
++Market Return : 59.13%   |   Portfolio Return : 301.95%   |   position : 1   |   portfolio_valuation : 4019.454264554453   |
++Market Return : 59.13%   |   Portfolio Return : 196.08%   |   position : -1   |   portfolio_valuation : 2960.7509820222735   |
++Market Return : 59.13%   |   Portfolio Return : 433.17%   |   position : 1   |   portfolio_valuation : 5331.70678517096   |
++Market Return : 59.13%   |   Portfolio Return : 98.59%   |   position : -1   |   portfolio_valuation : 1985.9010298700844   |
++Market Return : 59.13%   |   Portfolio Return : 299.16%   |   position : -1   |   portfolio_valuation : 3991.569940358223   |
++Market Return : 59.13%   |   Portfolio Return : 15.97%   |   position : 1   |   portfolio_valuation : 1159.705059576795   |
++Market Return : 59.13%   |   Portfolio Return : 210.55%   |   position : 1   |   portfolio_valuation : 3105.5306111277355   |
++Market Return : 59.13%   |   Portfolio Return : 39.84%   |   position : 1   |   portfolio_valuation : 1398.3749665768496   |
++Market Return : 59.13%   |   Portfolio Return : 27.64%   |   position : -1   |   portfolio_valuation : 1276.3900630265914   |
++Market Return : 59.13%   |   Portfolio Return : 51.82%   |   position : -1   |   portfolio_valuation : 1518.2364982027846   |
++Market Return : 59.13%   |   Portfolio Return : 115.34%   |   position : 1   |   portfolio_valuation : 2153.4238075200096   |
++Market Return : 59.13%   |   Portfolio Return : 284.19%   |   position : 1   |   portfolio_valuation : 3841.8524514249248   |
++Market Return : 59.13%   |   Portfolio Return : 288.98%   |   position : 1   |   portfolio_valuation : 3889.796433530785   |
++Market Return : 59.13%   |   Portfolio Return : 505.15%   |   position : 1   |   portfolio_valuation : 6051.497229302274   |
++Market Return : 59.13%   |   Portfolio Return : 422.17%   |   position : 1   |   portfolio_valuation : 5221.738556553007   |
++Market Return : 59.13%   |   Portfolio Return : 493.36%   |   position : 1   |   portfolio_valuation : 5933.551405141223   |
++Market Return : 59.13%   |   Portfolio Return : 200.89%   |   position : -1   |   portfolio_valuation : 3008.880824237189   |
++Market Return : 59.13%   |   Portfolio Return : 108.99%   |   position : 1   |   portfolio_valuation : 2089.8955160797473   |
++Market Return : 59.13%   |   Portfolio Return : 129.03%   |   position : 1   |   portfolio_valuation : 2290.2769633073885   |
++Market Return : 59.13%   |   Portfolio Return : 347.49%   |   position : -1   |   portfolio_valuation : 4474.886280467526   |
++Market Return : 59.13%   |   Portfolio Return : 184.62%   |   position : 1   |   portfolio_valuation : 2846.218917112426   |
++Market Return : 59.13%   |   Portfolio Return : 191.40%   |   position : -1   |   portfolio_valuation : 2914.026172418401   |
++Market Return : 59.13%   |   Portfolio Return : 410.12%   |   position : 1   |   portfolio_valuation : 5101.228734024679   |
++Market Return : 59.13%   |   Portfolio Return :  2.03%   |   position : -1   |   portfolio_valuation : 1020.2736665815542   |
++Market Return : 59.13%   |   Portfolio Return : 480.81%   |   position : -1   |   portfolio_valuation : 5808.096434705157   |
++Market Return : 59.13%   |   Portfolio Return : 297.77%   |   position : -1   |   portfolio_valuation : 3977.7233820935444   |
++Market Return : 59.13%   |   Portfolio Return : 27.49%   |   position : -1   |   portfolio_valuation : 1274.935727143996   |
++Market Return : 59.13%   |   Portfolio Return : 435.55%   |   position : 1   |   portfolio_valuation : 5355.539645123765   |
++Market Return : 59.13%   |   Portfolio Return : 300.03%   |   position : 1   |   portfolio_valuation : 4000.2892227905   |
++Market Return : 59.13%   |   Portfolio Return : 137.14%   |   position : -1   |   portfolio_valuation : 2371.423962008009   |
++Market Return : 59.13%   |   Portfolio Return : 442.82%   |   position : -1   |   portfolio_valuation : 5428.203768830841   |
++Market Return : 59.13%   |   Portfolio Return : 478.74%   |   position : -1   |   portfolio_valuation : 5787.36494468606   |
++Market Return : 59.13%   |   Portfolio Return : 382.78%   |   position : 1   |   portfolio_valuation : 4827.805835071347   |
++Market Return : 59.13%   |   Portfolio Return : 383.36%   |   position : 1   |   portfolio_valuation : 4833.635751116785   |
++Market Return : 59.13%   |   Portfolio Return : 230.99%   |   position : -1   |   portfolio_valuation : 3309.88640844351   |
++Market Return : 59.13%   |   Portfolio Return : 401.66%   |   position : -1   |   portfolio_valuation : 5016.593335322625   |
++Market Return : 59.13%   |   Portfolio Return : 419.98%   |   position : -1   |   portfolio_valuation : 5199.7538701696085   |
++Market Return : 59.13%   |   Portfolio Return : 381.51%   |   position : 1   |   portfolio_valuation : 4815.08688661015   |
++Market Return : 59.13%   |   Portfolio Return : 523.24%   |   position : 1   |   portfolio_valuation : 6232.444235464597   |
++Market Return : 59.13%   |   Portfolio Return : 104.37%   |   position : 1   |   portfolio_valuation : 2043.7139044685118   |
++Market Return : 59.13%   |   Portfolio Return : 504.97%   |   position : -1   |   portfolio_valuation : 6049.659790150557   |
++Market Return : 59.13%   |   Portfolio Return : 317.04%   |   position : 1   |   portfolio_valuation : 4170.357114810439   |
++Market Return : 59.13%   |   Portfolio Return : 414.12%   |   position : 1   |   portfolio_valuation : 5141.206949745116   |
++Market Return : 59.13%   |   Portfolio Return : 46.01%   |   position : 1   |   portfolio_valuation : 1460.1061890357983   |
++Market Return : 59.13%   |   Portfolio Return : 412.05%   |   position : 1   |   portfolio_valuation : 5120.489264449423   |
++Market Return : 59.13%   |   Portfolio Return : 222.65%   |   position : -1   |   portfolio_valuation : 3226.505532470188   |
++Market Return : 59.13%   |   Portfolio Return : 42.48%   |   position : -1   |   portfolio_valuation : 1424.8201505133989   |
++Market Return : 59.13%   |   Portfolio Return : 310.78%   |   position : -1   |   portfolio_valuation : 4107.8294684797165   |
++Market Return : 59.13%   |   Portfolio Return : 42.53%   |   position : 1   |   portfolio_valuation : 1425.3295672053575   |
++Market Return : 59.13%   |   Portfolio Return : 255.20%   |   position : -1   |   portfolio_valuation : 3551.9939961690934   |
++Market Return : 59.13%   |   Portfolio Return : 57.07%   |   position : -1   |   portfolio_valuation : 1570.7165755456188   |
++Market Return : 59.13%   |   Portfolio Return : 575.54%   |   position : 1   |   portfolio_valuation : 6755.444045608111   |
++Market Return : 59.13%   |   Portfolio Return : 24.84%   |   position : 1   |   portfolio_valuation : 1248.3877482338971   |
++Market Return : 59.13%   |   Portfolio Return : 508.44%   |   position : -1   |   portfolio_valuation : 6084.3919283693085   |
++Market Return : 59.13%   |   Portfolio Return : 300.21%   |   position : 1   |   portfolio_valuation : 4002.1180843939114   |
++Market Return : 59.13%   |   Portfolio Return : 71.10%   |   position : 1   |   portfolio_valuation : 1711.0176508989744   |
++Market Return : 59.13%   |   Portfolio Return : 24.51%   |   position : -1   |   portfolio_valuation : 1245.098634667925   |
++Market Return : 59.13%   |   Portfolio Return : 217.99%   |   position : -1   |   portfolio_valuation : 3179.9189673542155   |
++Market Return : 59.13%   |   Portfolio Return : 610.61%   |   position : 1   |   portfolio_valuation : 7106.082076896948   |
++Market Return : 59.13%   |   Portfolio Return : 451.14%   |   position : 1   |   portfolio_valuation : 5511.350782506888   |
++Market Return : 59.13%   |   Portfolio Return : 312.42%   |   position : 1   |   portfolio_valuation : 4124.200189930615   |
++Market Return : 59.13%   |   Portfolio Return : 285.43%   |   position : -1   |   portfolio_valuation : 3854.3401177761575   |
++Market Return : 59.13%   |   Portfolio Return : 262.66%   |   position : -1   |   portfolio_valuation : 3626.5705270789936   |
++Market Return : 59.13%   |   Portfolio Return : 217.12%   |   position : 1   |   portfolio_valuation : 3171.1606941246096   |
++Market Return : 59.13%   |   Portfolio Return : 72.72%   |   position : 1   |   portfolio_valuation : 1727.2179272214998   |
++Market Return : 59.13%   |   Portfolio Return : 517.87%   |   position : 1   |   portfolio_valuation : 6178.710915695501   |
++Market Return : 59.13%   |   Portfolio Return : 89.56%   |   position : 1   |   portfolio_valuation : 1895.57527878249   |
++Market Return : 59.13%   |   Portfolio Return : 29.95%   |   position : 1   |   portfolio_valuation : 1299.5492329971405   |
++Market Return : 59.13%   |   Portfolio Return : 384.77%   |   position : 1   |   portfolio_valuation : 4847.667314097891   |
++Market Return : 59.13%   |   Portfolio Return : 25.93%   |   position : 1   |   portfolio_valuation : 1259.3303191917564   |
++Market Return : 59.13%   |   Portfolio Return : 191.79%   |   position : 1   |   portfolio_valuation : 2917.9462707663038   |
++Market Return : 59.13%   |   Portfolio Return : 379.18%   |   position : 1   |   portfolio_valuation : 4791.770978637532   |
++Market Return : 59.13%   |   Portfolio Return : 362.93%   |   position : 1   |   portfolio_valuation : 4629.314584099381   |
++Market Return : 59.13%   |   Portfolio Return : 25.51%   |   position : 1   |   portfolio_valuation : 1255.1322264004652   |
++Market Return : 59.13%   |   Portfolio Return : 265.48%   |   position : 1   |   portfolio_valuation : 3654.8194531657387   |
++Market Return : 59.13%   |   Portfolio Return : 75.92%   |   position : 1   |   portfolio_valuation : 1759.1954125282184   |
++Market Return : 59.13%   |   Portfolio Return : 36.41%   |   position : -1   |   portfolio_valuation : 1364.1404407073087   |
++Market Return : 59.13%   |   Portfolio Return : 461.14%   |   position : -1   |   portfolio_valuation : 5611.387465202129   |
++Market Return : 59.13%   |   Portfolio Return : 271.84%   |   position : 1   |   portfolio_valuation : 3718.3876554890107   |
++Market Return : 59.13%   |   Portfolio Return : 97.97%   |   position : 1   |   portfolio_valuation : 1979.6700937533049   |
++Market Return : 59.13%   |   Portfolio Return : 404.24%   |   position : 1   |   portfolio_valuation : 5042.360101776124   |
++Market Return : 59.13%   |   Portfolio Return : 270.02%   |   position : 1   |   portfolio_valuation : 3700.1717920039478   |
++Market Return : 59.13%   |   Portfolio Return : 199.52%   |   position : 1   |   portfolio_valuation : 2995.199563663503   |
++Market Return : 59.13%   |   Portfolio Return : 291.85%   |   position : 1   |   portfolio_valuation : 3918.5305787763054   |
++Market Return : 59.13%   |   Portfolio Return : 79.52%   |   position : 1   |   portfolio_valuation : 1795.2078298338047   |
++Market Return : 59.13%   |   Portfolio Return : 407.37%   |   position : 1   |   portfolio_valuation : 5073.718515091857   |
++Market Return : 59.13%   |   Portfolio Return : 156.36%   |   position : 1   |   portfolio_valuation : 2563.584846625719   |
++Market Return : 59.13%   |   Portfolio Return : 613.04%   |   position : 1   |   portfolio_valuation : 7130.376448367729   |
++Market Return : 59.13%   |   Portfolio Return : 127.74%   |   position : 1   |   portfolio_valuation : 2277.4128189093603   |
++Market Return : 59.13%   |   Portfolio Return : 453.89%   |   position : 1   |   portfolio_valuation : 5538.895244269891   |
++Market Return : 59.13%   |   Portfolio Return : 86.44%   |   position : -1   |   portfolio_valuation : 1864.4483494989156   |
++Market Return : 59.13%   |   Portfolio Return : 228.94%   |   position : -1   |   portfolio_valuation : 3289.3799124146426   |
++Market Return : 59.13%   |   Portfolio Return : 174.14%   |   position : 1   |   portfolio_valuation : 2741.3711753626067   |
++Market Return : 59.13%   |   Portfolio Return : 33.72%   |   position : 1   |   portfolio_valuation : 1337.2217805444873   |
++Market Return : 59.13%   |   Portfolio Return : 525.73%   |   position : 1   |   portfolio_valuation : 6257.309872837041   |
++Market Return : 59.13%   |   Portfolio Return : 374.20%   |   position : 1   |   portfolio_valuation : 4741.961018742949   |
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++SPS: 7
++model saved to runs/TradingEnv__d3qn__1__1778185519/d3qn.cleanrl_model
++Starting evaluation...
++Evaluation failed, but training is saved: TradingEnv.__init__() missing 1 required positional argument: 'df' was raised from the environment creator for TradingEnv with kwargs ({'render_mode': 'logs'})
++Generating interactive chart...
++Chart saved to the 'render' folder. Open the HTML file in your browser!
+diff --git a/wandb/run-20260507_212524-u2x3tvmp/logs/debug-internal.log b/wandb/run-20260507_212524-u2x3tvmp/logs/debug-internal.log
+index f517a20..3ef08f6 100644
+--- a/wandb/run-20260507_212524-u2x3tvmp/logs/debug-internal.log
++++ b/wandb/run-20260507_212524-u2x3tvmp/logs/debug-internal.log
+@@ -51,3 +51,13 @@
+ {"time":"2026-05-08T16:45:18.74465+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":150987}
+ {"time":"2026-05-08T16:45:18.745037+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+ {"time":"2026-05-08T16:50:18.403968+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/u2x3tvmp/file_stream\": read tcp [2a00:23ee:2970:e74:19f4:4c2c:8ae5:ea3b]:62406->[64:ff9b::2208:fa65]:443: read: no route to host"}
++{"time":"2026-05-08T16:53:25.375007+01:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/etshre-tradingbot/trading/u2x3tvmp/output.log?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260508T155259Z&X-Goog-Expires=86399&X-Goog-Signature=20dbf536062fca7de8000420dc10b39b2749d17d4505fb88a723d442c33665099cd19a34d5ecbdf6c61d50097a35a3b7248151e2224b28cef3f988b36623b6626b8ade0b41b392c8cdda66ab6641fed6379ee0b76fcbc334c03ccf1002c41106969655f53134aba63d37a19bb199f6482fa5e220fdc8d450da713421e77d6232b92420ba6e0234ee8bcdbadbf86383cd8c089f37650b6b26fe49976abb22947f529144ef3962ce4d7eddf018629604841a8b2982ca900fe8586b4472045bf26d49c2df3710a07099d0bef040b7c6ce4229ab8a42560608f7c4818c5281753af04d4d15b5d5500d65a13926a7212ee20d9c6d07524012ae161dcd35ee6582ce43&X-Goog-SignedHeaders=host&X-User=etshre\": unexpected EOF"}
++{"time":"2026-05-08T16:53:25.381845+01:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/etshre-tradingbot/trading/u2x3tvmp/config.yaml?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260508T155259Z&X-Goog-Expires=86399&X-Goog-Signature=5fb3eee91392933f1a4edd7145068b9270bad9dcbe67affe955603f8e88fcdb3000b4a1b1e396fe202ac966a84df51c34d7ce339f221aa75e1f8c4926328e0176840b5effeefe882bde5b39b4d93e45b472d0dd3a5fbd80d97d7230058a2ba49fb6d75769b8bda343773c868eaeb803a0d185487b5bfb82fa8986692099b2065eee3394d8e0329eda9ebf8c780e483e51e032be5af9c9ccc36cce70642246ca279a6c598e8b2790aa4defb90f7ff3f1e1c16f2408ff679db89104684d641f7b56b03802dd51448d5fa820ac7e2ee218dff938f4c100c6894d1224ab2194d40f8a6fce797d3c84f26de7f0428e1ed0fafc542f9e390b24ab5c312230c593bfa0a&X-Goog-SignedHeaders=host&X-User=etshre\": unexpected EOF"}
++{"time":"2026-05-08T16:53:25.383741+01:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/etshre-tradingbot/trading/u2x3tvmp/runs/TradingEnv__d3qn__1__1778185519/events.out.tfevents.1778185526.MacBookPro.lan.31389.0?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260508T155259Z&X-Goog-Expires=86399&X-Goog-Signature=492fd985a8d881f84af5beca4891d1cbf0f653b72697ced4da2b904bc34c89daff1354d625ec4705652eb2e76f8189b35678856e7b53e89872b314e3d3691bb68839435a400ba162e3d0d9f49e19bd179bef676511e718c916ab6031554018dbaf20c5d60d4a490f4bd3afd92aa7c9ed1ce8b310658634a6141a162b1fff1829ef1439c42f38b11c8a47e275a084fb840d6952f3e11b02ff3b1a997fae9a2383b10185054fdf566c7f2110469a3e5856e564dccd43ffab8d76d7322303ec07258f4d7f0095c0c9ec2880f09f83248b478437e4c86f7620025496bb57bd8e4420d9b44aefbf69ff1b23fa74d7d96cbec0d1f7becda8a5a50f4eb6176ae85f259d&X-Goog-SignedHeaders=host&X-User=etshre\": unexpected EOF"}
++{"time":"2026-05-08T16:53:25.386119+01:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/etshre-tradingbot/trading/u2x3tvmp/wandb-summary.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260508T155259Z&X-Goog-Expires=86399&X-Goog-Signature=8eaf4f523a8e9d008154bff3912743dc9ef9511dc7e61ccd416b23e53b3f322a782426cf1a8898bd797d65dfa2946b3c5ba6c2624ce3186bb5f306390563f0a0036ce4bf1ca9b61c8cdaf13f06abeba81faf04d0a447293abf533181d6a0d343dc0e52155441a88886dca4251c91635945523c0222a75b69e7b773fedcc04193a6362f664d11c19ac4ef6120bf733448dc27838c98a010c9457b2610da6971bc5ff129cef2999d39c14f1b11d2f4a2342b77749d1482881bdfa602162a68a41bd4936b85cf832ee743a1821cd9bce2fd77de8b92c990a80009b1962494cc18da418bfe9973c73ed539fbee65aba1b763204adb120e04bf5a13328d0d9f94050a&X-Goog-SignedHeaders=host&X-User=etshre\": unexpected EOF"}
++{"time":"2026-05-08T16:53:30.954815+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
++{"time":"2026-05-08T16:53:31.303053+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
++{"time":"2026-05-08T16:53:31.385865+01:00","level":"INFO","msg":"stream: closing","id":"u2x3tvmp"}
++{"time":"2026-05-08T16:53:31.385976+01:00","level":"INFO","msg":"handler: closed","stream_id":"u2x3tvmp"}
++{"time":"2026-05-08T16:53:31.387303+01:00","level":"INFO","msg":"sender: closed","stream_id":"u2x3tvmp"}
++{"time":"2026-05-08T16:53:31.387367+01:00","level":"INFO","msg":"stream: closed","id":"u2x3tvmp"}
+diff --git a/wandb/run-20260507_212524-u2x3tvmp/logs/debug.log b/wandb/run-20260507_212524-u2x3tvmp/logs/debug.log
+index 148261b..8c64774 100644
+--- a/wandb/run-20260507_212524-u2x3tvmp/logs/debug.log
++++ b/wandb/run-20260507_212524-u2x3tvmp/logs/debug.log
+@@ -18,3 +18,8 @@ config: {'exp_name': 'd3qn', 'seed': 1, 'torch_deterministic': True, 'cuda': Tru
+ 2026-05-07 21:25:26,797 INFO    MainThread:31389 [wandb_run.py:_redirect():2465] Redirects installed.
+ 2026-05-07 21:25:26,801 INFO    MainThread:31389 [wandb_init.py:init():1082] run started, returning control to user process
+ 2026-05-07 21:25:26,802 INFO    MainThread:31389 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/TradingEnv__d3qn__1__1778185519, True
++2026-05-08 16:52:59,094 INFO    MainThread:31389 [wandb_run.py:_finish():2291] finishing run etshre-tradingbot/trading/u2x3tvmp
++2026-05-08 16:52:59,098 INFO    MainThread:31389 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
++2026-05-08 16:52:59,099 INFO    MainThread:31389 [wandb_run.py:_restore():2472] restore
++2026-05-08 16:52:59,099 INFO    MainThread:31389 [wandb_run.py:_restore():2478] restore done
++2026-05-08 16:53:31,372 INFO    MainThread:31389 [wandb_run.py:_footer_sync_info():3868] logging synced files
+diff --git a/wandb/run-20260507_212524-u2x3tvmp/run-u2x3tvmp.wandb b/wandb/run-20260507_212524-u2x3tvmp/run-u2x3tvmp.wandb
+index 50fab50..d74e2bb 100644
+Binary files a/wandb/run-20260507_212524-u2x3tvmp/run-u2x3tvmp.wandb and b/wandb/run-20260507_212524-u2x3tvmp/run-u2x3tvmp.wandb differ

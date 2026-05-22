@@ -1,0 +1,52 @@
+{"time":"2026-05-19T20:08:32.530422+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-05-19T20:08:32.544658+01:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/emerald/code/tradingbot/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-05-19T20:08:32.788744+01:00","level":"INFO","msg":"stream: created new stream","id":"m95o4obp"}
+{"time":"2026-05-19T20:08:32.788805+01:00","level":"INFO","msg":"handler: started","stream_id":"m95o4obp"}
+{"time":"2026-05-19T20:08:32.789036+01:00","level":"INFO","msg":"stream: started","id":"m95o4obp"}
+{"time":"2026-05-19T20:08:32.789052+01:00","level":"INFO","msg":"sender: started","stream_id":"m95o4obp"}
+{"time":"2026-05-19T20:08:32.789055+01:00","level":"INFO","msg":"writer: started","stream_id":"m95o4obp"}
+{"time":"2026-05-19T20:08:44.180402+01:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-05-19T20:08:44.215929+01:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/emerald/code/tradingbot/runs/TradingEnv__d3qn__1__1779217709\")","namespace":""}
+{"time":"2026-05-19T20:08:44.217944+01:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/emerald/code/tradingbot/runs/TradingEnv__d3qn__1__1779217709/events.out.tfevents.1779217714.MacBookPro.lan.64986.0","runPath":"runs/TradingEnv__d3qn__1__1779217709/events.out.tfevents.1779217714.MacBookPro.lan.64986.0"}
+{"time":"2026-05-19T20:20:19.775707+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T20:20:19.778144+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":20617}
+{"time":"2026-05-19T20:20:47.716084+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":21443}
+{"time":"2026-05-19T20:20:47.719046+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":65}
+{"time":"2026-05-19T20:32:35.13272+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":41163}
+{"time":"2026-05-19T20:32:35.133323+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T20:45:11.286488+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":59576}
+{"time":"2026-05-19T20:45:11.33303+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":14}
+{"time":"2026-05-19T20:45:31.375828+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":59802}
+{"time":"2026-05-19T20:45:31.385195+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":58}
+{"time":"2026-05-19T21:13:08.611454+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/m95o4obp/file_stream\": read tcp 192.168.1.42:59236->34.8.250.101:443: read: operation timed out"}
+{"time":"2026-05-19T21:19:06.470678+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":64550}
+{"time":"2026-05-19T21:19:06.471468+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T21:19:06.472857+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":64583}
+{"time":"2026-05-19T21:19:06.476515+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2026-05-19T21:20:41.513151+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":67493}
+{"time":"2026-05-19T21:20:41.51439+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":22}
+{"time":"2026-05-19T21:22:09.793889+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":69873}
+{"time":"2026-05-19T21:22:09.795302+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T21:22:09.846717+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":69907}
+{"time":"2026-05-19T21:22:09.852809+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":76}
+{"time":"2026-05-19T21:25:06.636131+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":75534}
+{"time":"2026-05-19T21:25:06.641645+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":24}
+{"time":"2026-05-19T21:32:34.905035+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":90052}
+{"time":"2026-05-19T21:32:34.944821+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":137}
+{"time":"2026-05-19T22:05:14.076988+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/m95o4obp/file_stream\": read tcp [2a00:23ee:2970:e65:4f1:b8c5:7123:adb9]:59977->[64:ff9b::2208:fa65]:443: read: operation timed out"}
+{"time":"2026-05-19T22:51:17.924404+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/m95o4obp/file_stream\": read tcp [2a00:23ee:2970:e65:4f1:b8c5:7123:adb9]:60390->[64:ff9b::2208:fa65]:443: read: operation timed out"}
+{"time":"2026-05-19T23:15:58.812531+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":99384}
+{"time":"2026-05-19T23:15:58.832403+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2026-05-19T23:16:00.437487+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/etshre-tradingbot/trading/m95o4obp/file_stream\": read tcp [2a00:23ee:2970:e65:4f1:b8c5:7123:adb9]:60662->[64:ff9b::2208:fa65]:443: read: operation timed out"}
+{"time":"2026-05-19T23:17:07.752136+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":100543}
+{"time":"2026-05-19T23:17:07.752622+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T23:31:58.164712+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":123627}
+{"time":"2026-05-19T23:31:58.165939+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-19T23:48:33.954459+01:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":139181}
+{"time":"2026-05-19T23:48:33.954652+01:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2026-05-20T00:03:57.138069+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-20T00:03:57.594328+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-05-20T00:03:57.632278+01:00","level":"INFO","msg":"stream: closing","id":"m95o4obp"}
+{"time":"2026-05-20T00:03:57.632332+01:00","level":"INFO","msg":"handler: closed","stream_id":"m95o4obp"}
+{"time":"2026-05-20T00:03:57.632776+01:00","level":"INFO","msg":"sender: closed","stream_id":"m95o4obp"}
+{"time":"2026-05-20T00:03:57.632823+01:00","level":"INFO","msg":"stream: closed","id":"m95o4obp"}
