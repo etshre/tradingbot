@@ -149,7 +149,7 @@ class DuelingQNetwork(nn.Module):
         value = self.value_stream(x)
         adv = self.adv_stream(x)
 
-        # dueling output: Q = V + (A - mean(A))
+        # dueling output:
         return value + adv - adv.mean(dim=1, keepdim=True)
 
 def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
