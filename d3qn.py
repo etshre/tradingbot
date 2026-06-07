@@ -100,7 +100,7 @@ def make_env(env_id, seed, idx, capture_video, run_name, data_path):
                 df=df,
                 windows=args.window_size,
                 positions = [-1, 0, 1],
-                trading_fees = 0.01/100,
+                trading_fees = 0.05/100,
                 name=f'env_{idx}',
                 )
             
